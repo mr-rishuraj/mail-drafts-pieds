@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!--<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no"/>
+<meta name="x-apple-disable-message-reformatting"/>
+<!-- ── True dual-mode: light default, dark via CSS overrides ── -->
+<meta name="color-scheme" content="light dark"/>
+<meta name="supported-color-schemes" content="light dark"/>
+<title>E-Summit 2026 — PIEDS × BITS Pilani</title>
+
+<!--[if !mso]><!-->
+<style>
+@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:local('Fira Sans Light'),local('FiraSans-Light'),url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnPKreRhf6Xl7Glw.woff2) format('woff2');}
+@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;src:local('Fira Sans Medium'),local('FiraSans-Medium'),url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnZKveRhf6Xl7Glw.woff2) format('woff2');}
+@font-face{font-family:'Fira Sans';font-style:normal;font-weight:800;font-display:swap;src:local('Fira Sans ExtraBold'),local('FiraSans-ExtraBold'),url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnMK7eRhf6Xl7Glw.woff2) format('woff2');}
+</style>
+<!--<![endif]-->
+
+<style>
+/* ══════════════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════════════ */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100% !important;
+  width: 100% !important;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f5f5f5 !important;
+}
+* { -ms-text-size-adjust: 100%; }
+#outlook a { padding: 0; }
+.ReadMsgBody, .ExternalClass { width: 100%; }
+.ExternalClass, .ExternalClass p, .ExternalClass td,
+.ExternalClass div, .ExternalClass span, .ExternalClass font { line-height: 100%; }
+table, td, th { mso-table-lspace: 0 !important; mso-table-rspace: 0 !important; border-collapse: collapse; }
+img { border: 0; outline: 0; line-height: 100%; text-decoration: none; -ms-interpolation-mode: bicubic; }
+a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+
+/* ── BITS logo background — ALWAYS light (white pill) ────────── */
+/* This class is the white container wrapping the BITS logo.
+   Every dark-mode override block below re-asserts #ffffff so no
+   client can ever darken or invert it. */
+.logo-bits-bg {
+  background-color: #ffffff !important;
+  border-radius: 6px;
+}
+/* Both logos locked to the same height so they align on every screen */
+.logo-bits  { height: 40px; width: auto; max-width: 160px; }
+.logo-pieds { height: 40px; width: auto; max-width: 60px; }
+
+/* ── Outlook iOS / Gmail iOS [data-ogsc] dark-mode ──────────── */
+[data-ogsc] .bg-base,
+[data-ogsb] .bg-base                 { background-color: #0a0a0a !important; }
+[data-ogsc] .bg-header,
+[data-ogsb] .bg-header               { background-color: #0d0d14 !important; }
+[data-ogsc] .bg-hero,
+[data-ogsb] .bg-hero                 { background-color: #0a0618 !important; }
+[data-ogsc] .bg-countdown,
+[data-ogsb] .bg-countdown            { background-color: #0a0a14 !important; }
+[data-ogsc] .bg-stats,
+[data-ogsb] .bg-stats                { background-color: #0d0d1a !important; }
+[data-ogsc] .bg-events,
+[data-ogsb] .bg-events               { background-color: #0d0d1a !important; }
+[data-ogsc] .bg-quote,
+[data-ogsb] .bg-quote                { background-color: #0f0820 !important; }
+[data-ogsc] .bg-cta,
+[data-ogsb] .bg-cta                  { background-color: #0a0a14 !important; }
+[data-ogsc] .bg-footer,
+[data-ogsb] .bg-footer               { background-color: #0d0d14 !important; }
+[data-ogsc] .txt-primary,
+[data-ogsb] .txt-primary             { color: #e5e7eb !important; }
+[data-ogsc] .txt-muted,
+[data-ogsb] .txt-muted               { color: #9ca3af !important; }
+[data-ogsc] .txt-accent,
+[data-ogsb] .txt-accent              { color: #a78bfa !important; }
+[data-ogsc] .txt-label,
+[data-ogsb] .txt-label               { color: #6b7280 !important; }
+[data-ogsc] .txt-white,
+[data-ogsb] .txt-white               { color: #ffffff  !important; }
+[data-ogsc] img,
+[data-ogsb] img                      { -webkit-filter: none !important; filter: none !important; }
+[data-ogsc] body,
+[data-ogsb] body                     { background-color: #0a0a0a !important; }
+[data-ogsc] .outer-wrapper,
+[data-ogsb] .outer-wrapper           { background-color: #0a0a0a !important; }
+[data-ogsc] .bg-overlay,
+[data-ogsb] .bg-overlay              { background-color: #080416 !important; }
+/* BITS logo background stays white even in dark-mode clients */
+[data-ogsc] .logo-bits-bg,
+[data-ogsb] .logo-bits-bg            { background-color: #ffffff !important; }
+
+/* ── Gmail web dark mode (u + .outer-wrapper) ────────────────── */
+u + .outer-wrapper .bg-base     { background-color: #0a0a0a !important; }
+u + .outer-wrapper .bg-header   { background-color: #0d0d14 !important; }
+u + .outer-wrapper .bg-hero     { background-color: #0a0618 !important; }
+u + .outer-wrapper .bg-countdown{ background-color: #0a0a14 !important; }
+u + .outer-wrapper .bg-stats    { background-color: #0d0d1a !important; }
+u + .outer-wrapper .bg-events   { background-color: #0d0d1a !important; }
+u + .outer-wrapper .bg-quote    { background-color: #0f0820 !important; }
+u + .outer-wrapper .bg-cta      { background-color: #0a0a14 !important; }
+u + .outer-wrapper .bg-footer   { background-color: #0d0d14 !important; }
+u + .outer-wrapper .bg-overlay  { background-color: #080416 !important; }
+u + .outer-wrapper .txt-primary { color: #e5e7eb !important; }
+u + .outer-wrapper .txt-muted   { color: #9ca3af !important; }
+u + .outer-wrapper .txt-accent  { color: #a78bfa !important; }
+u + .outer-wrapper .txt-label   { color: #6b7280 !important; }
+u + .outer-wrapper .txt-white   { color: #ffffff !important; }
+u + .outer-wrapper img          { -webkit-filter: none !important; filter: none !important; }
+u + .outer-wrapper .logo-bits-bg{ background-color: #ffffff !important; }
+
+/* ── Standard media-query fallback (Apple Mail, Samsung) ─────── */
+@media (prefers-color-scheme: light) {
+  html, body,
+  .outer-wrapper               { background-color: #f5f5f5 !important; }
+  .bg-base                     { background-color: #f5f5f5 !important; }
+  .bg-header                   { background-color: #ffffff !important; }
+  .bg-hero                     { background-color: #f0f0f0 !important; }
+  .bg-overlay                  { background-color: rgba(255,255,255,0.90) !important; }
+  .bg-countdown                { background-color: #ebebeb !important; }
+  .bg-stats                    { background-color: #ebebeb !important; }
+  .bg-events                   { background-color: #f8f8f8 !important; }
+  .bg-quote                    { background-color: #f0f0f0 !important; }
+  .bg-cta                      { background-color: #ebebeb !important; }
+  .bg-footer                   { background-color: #f5f5f5 !important; }
+  .logo-bits-bg                { background-color: #ffffff !important; }
+  .txt-primary                 { color: #111111 !important; }
+  .txt-muted                   { color: #555555 !important; }
+  .txt-accent                  { color: #7c3aed !important; }
+  .txt-label                   { color: #555555 !important; }
+  .txt-white                   { color: #ffffff !important; }
+}
+
+/* ── Dark mode — reinforce our colours ───────────────────────── */
+@media (prefers-color-scheme: dark) {
+  html, body, .outer-wrapper    { background-color: #0a0a0a !important; color-scheme: dark; }
+  .bg-base                      { background-color: #0a0a0a !important; }
+  .bg-header                    { background-color: #0d0d14 !important; }
+  .bg-hero                      { background-color: #0a0618 !important; }
+  .bg-overlay                   { background-color: #080416 !important; }
+  .bg-countdown                 { background-color: #0a0a14 !important; }
+  .bg-stats                     { background-color: #0d0d1a !important; }
+  .bg-events                    { background-color: #0d0d1a !important; }
+  .bg-quote                     { background-color: #0f0820 !important; }
+  .bg-cta                       { background-color: #0a0a14 !important; }
+  .bg-footer                    { background-color: #0d0d14 !important; }
+  /* BITS logo stays on white regardless of device dark mode */
+  .logo-bits-bg                 { background-color: #ffffff !important; }
+  .txt-primary                  { color: #e5e7eb !important; }
+  .txt-muted                    { color: #9ca3af !important; }
+  .txt-accent                   { color: #a78bfa !important; }
+  .txt-label                    { color: #6b7280 !important; }
+  .txt-white                    { color: #ffffff  !important; }
+  img                           { -webkit-filter: none !important; filter: none !important; }
+}
+
+/* ══════════════════════════════════════════════
+   HOVER EFFECTS (desktop webmail)
+══════════════════════════════════════════════ */
+a.btn-primary:hover {
+  opacity: 0.85 !important;
+  background: linear-gradient(135deg,#7c3aed 0%,#4f46e5 100%) !important;
+}
+.event-card:hover {
+  border-color: rgba(167,139,250,0.9) !important;
+  background-color: rgba(30,20,60,0.95) !important;
+}
+.social-link:hover {
+  color: #c084fc !important;
+  text-decoration: underline !important;
+}
+.stat-cell:hover { background-color: rgba(138,43,226,0.1) !important; }
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — three-tier fluid sizing
+══════════════════════════════════════════════ */
+
+/* ── LARGE: restore full hero title above 620px ── */
+@media only screen and (min-width: 621px) {
+  .hero-title { font-size: 54px !important; }
+}
+
+/* ── MEDIUM: 421–620 px (tablets, large phones landscape) ── */
+@media only screen and (max-width: 620px) {
+  .outer-wrapper,
+  .email-container,
+  .email-body,
+  .full-width-table        { width: 100% !important; max-width: 100% !important; }
+
+  /* Logo */
+  .logo-area               { padding: 3% 4% !important; }
+  .logo-bits-cell          { min-width: 0 !important; }
+  .logo-pieds-cell         { width: 12% !important; min-width: 40px !important; }
+  .logo-bits               { height: 6.5vw !important; max-height: 36px !important; width: auto !important; max-width: 140px !important; }
+  .logo-pieds              { height: 6.5vw !important; max-height: 36px !important; width: auto !important; min-width: 0 !important; }
+  .logo-bits-bg            { padding: 0.4em 0.6em !important; }
+
+  /* Hero */
+  .hero-outer              { background-size: 160% auto !important; background-position: 80% center !important; }
+  .hero-inner-pad          { padding: 9% 5% 8% !important; }
+  .hero-org-line           { font-size: 0.6em !important; letter-spacing: 0.22em !important; }
+  .hero-title              { font-size: 11vw !important; }
+  .hero-year               { font-size: 0.95em !important; }
+  .hero-pills td           { display: block !important; padding: 0.25em 0 !important; text-align: center !important; }
+  .hero-pill               { display: inline-block !important; }
+  .hero-lead               { font-size: 1.15em !important; }
+  .hero-body               { font-size: 0.9em !important; }
+  .hero-italic             { font-size: 0.875em !important; }
+
+  /* Countdown */
+  .countdown-pad           { padding: 4% 3% 3% !important; }
+  .countdown-img           { max-width: 100% !important; width: 100% !important; }
+
+  /* Stats — stack 2×2 */
+  .stat-cell {
+    display: inline-block !important;
+    width: 49% !important;
+    box-sizing: border-box !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+    vertical-align: top !important;
+  }
+  .stat-cell:nth-child(odd)  { border-right: 1px solid rgba(0,0,0,0.1) !important; }
+  .stat-cell:last-child      { border-bottom: none !important; }
+  .stat-number               { font-size: 1.75em !important; }
+
+  /* Section label */
+  .section-label           { font-size: 0.6em !important; letter-spacing: 0.25em !important; padding: 0.7em 5% !important; }
+
+  /* Events */
+  .section-pad             { padding: 5% 4% !important; }
+  .event-card              { padding: 3.5% !important; }
+  .event-card-title        { font-size: 0.9em !important; }
+  .event-card-body         { font-size: 0.875em !important; }
+
+  /* Pull quote */
+  .quote-pad               { padding: 6% 5% !important; }
+  .quote-text              { font-size: 1.35em !important; }
+
+  /* CTA */
+  .cta-pad                 { padding: 7% 5% 6% !important; }
+  .cta-head                { font-size: 1.6em !important; }
+  .cta-body                { font-size: 0.9em !important; }
+  .btn-primary             { padding: 1em 6% !important; font-size: 0.8em !important; width: 82% !important; box-sizing: border-box !important; }
+  .audience-tags           { font-size: 0.65em !important; }
+  .audience-tag            { display: inline-block !important; margin: 0.2em 0.15em !important; }
+
+  /* Footer */
+  .footer-pad              { padding: 4.5% 5% !important; }
+  .footer-brand            { font-size: 0.9em !important; }
+  .footer-text             { font-size: 0.7em !important; }
+  .footer-social a         { margin: 0 0.6em !important; font-size: 0.7em !important; }
+}
+
+/* ── SMALL: up to 420 px (small phones) ── */
+@media only screen and (max-width: 420px) {
+  /* Logo */
+  .logo-area               { padding: 2.5% 3.5% !important; }
+  .logo-bits               { height: 8vw !important; max-height: 32px !important; width: auto !important; max-width: 120px !important; }
+  .logo-pieds              { height: 8vw !important; max-height: 32px !important; width: auto !important; }
+
+  /* Hero */
+  .hero-inner-pad          { padding: 10% 4% 9% !important; }
+  .hero-title              { font-size: 12vw !important; }
+  .hero-org-line           { font-size: 0.55em !important; letter-spacing: 0.18em !important; }
+  .hero-lead               { font-size: 1.05em !important; }
+  .hero-body               { font-size: 0.85em !important; }
+
+  /* Stats */
+  .stat-number             { font-size: 1.5em !important; }
+
+  /* Quote */
+  .quote-text              { font-size: 1.2em !important; }
+
+  /* CTA */
+  .cta-head                { font-size: 1.4em !important; }
+  .btn-primary             { width: 90% !important; padding: 1em 4% !important; }
+
+  /* Events */
+  .section-pad             { padding: 4% 3.5% !important; }
+}
+</style>
+<!--[if mso]>
+<style>.pc-font-alt{font-family:Arial,Helvetica,sans-serif!important;}</style>
+<![endif]-->
+<!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+</head>
+
+<body class="pc-font-alt outer-wrapper bg-base"
+  style="width:100%!important;min-height:100%!important;margin:0!important;padding:0!important;
+         mso-line-height-rule:exactly;background-color:#f5f5f5;"
+  bgcolor="#f5f5f5">
+
+<table class="outer-wrapper" style="table-layout:fixed;width:100%;background-color:#f5f5f5;" bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" role="presentation">
+<tr><td align="center" valign="top">
+
+  <table class="email-container" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;max-width:600px;">
+  <tr><td style="padding:0;" align="left" valign="top">
+
+    <table class="email-body full-width-table" style="width:100%;max-width:600px;" width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
+    <tr><td valign="top" class="bg-base" style="background-color:#f5f5f5;" bgcolor="#f5f5f5">
+
+
+    <!-- ════════ LOGOS ROW ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="logo-area bg-header" style="padding:3.2% 4%;background-color:#ffffff;border-bottom:1px solid rgba(0,0,0,0.1);" bgcolor="#ffffff">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <!-- BITS logo — always on a white pill so it is readable on any background -->
+          <td class="logo-bits-cell" valign="middle" align="left" style="min-width:0;">
+            <!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+            <td style="background-color:#ffffff;padding:7px 12px;">
+            <![endif]-->
+            <div class="logo-bits-bg" style="display:inline-block;background-color:#ffffff;border-radius:6px;padding:0.45em 0.75em;line-height:0;">
+              <img class="logo-bits" src="https://lh3.googleusercontent.com/d/1tfcC88GNtDzLAnx9sl7V0N6QMZW7RSFs" width="160" height="43" alt="BITS Pilani"
+                style="display:block;width:auto;max-width:160px;height:auto;outline:0;line-height:100%;border:0;-webkit-filter:none!important;filter:none!important;"/>
+            </div>
+            <!--[if mso]></td></tr></table><![endif]-->
+          </td>
+          <td class="logo-pieds-cell" valign="middle" align="right" width="12%" style="width:12%;min-width:52px;">
+            <img class="logo-pieds" src="https://lh3.googleusercontent.com/d/1I1meF4A468IpDdnxZLRyLJ78mhOATvT9" width="60" height="60" alt="PIEDS"
+              style="display:block;height:40px;width:auto;max-width:60px;outline:0;line-height:100%;border:0;margin-left:auto;-webkit-filter:none!important;filter:none!important;"/>
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ HERO ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="hero-outer bg-hero" valign="top" align="center"
+        style="background-color:#f0f0f0;
+               background-image:url('https://lh3.googleusercontent.com/d/1hZR4FeZW8mfX8R4Pv7Lim3CnBXlDmTMj');
+               background-size:200% auto;
+               background-position:70% center;
+               background-repeat:no-repeat;
+               border-bottom:2px solid rgba(0,0,0,0.08);
+               padding:0;margin:0;"
+        bgcolor="#f0f0f0">
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <td class="hero-inner-pad bg-overlay" align="center" valign="top"
+            style="background-color:rgba(255,255,255,0.90);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);padding:10% 6% 9%;"
+            bgcolor="#f0f0f0">
+
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+              <!-- Org line -->
+              <tr><td align="center" style="padding-bottom:1.375em;">
+                <div class="pc-font-alt hero-org-line txt-accent"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                         letter-spacing:0.4em;color:#7c3aed;text-transform:uppercase;">
+                  ◈ &nbsp; PIEDS &nbsp; PRESENTS &nbsp; ◈
+                </div>
+              </td></tr>
+
+              <!-- E-SUMMIT -->
+              <tr><td align="center" style="padding-bottom:0.5em;">
+                <div class="pc-font-alt hero-title"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:54px;font-weight:800;
+                         letter-spacing:0.04em;line-height:1;text-transform:uppercase;
+                         background:linear-gradient(135deg,#a78bfa 0%,#60a5fa 50%,#c084fc 100%);
+                         -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                         background-clip:text;color:#111111;">
+                  E-SUMMIT
+                </div>
+                <!--[if mso]><div class="pc-font-alt" style="font-family:Arial,Helvetica,sans-serif;font-size:72px;font-weight:800;letter-spacing:0.04em;line-height:1;color:#111111;text-transform:uppercase;text-align:center;">E-SUMMIT</div><![endif]-->
+              </td></tr>
+
+              <!-- Year -->
+              <tr><td align="center" style="padding-bottom:1.875em;">
+                <div class="pc-font-alt hero-year txt-label"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1.125em;font-weight:300;
+                         letter-spacing:0.45em;color:#222222;">
+                  2 &nbsp;·&nbsp; 0 &nbsp;·&nbsp; 2 &nbsp;·&nbsp; 6
+                </div>
+              </td></tr>
+
+              <!-- Date + Location pills -->
+              <tr><td class="hero-pills" align="center" style="padding-bottom:2em;text-align:center;">
+                <div class="pc-font-alt hero-pill txt-muted"
+                  style="display:inline-block;border:1px solid rgba(0,0,0,0.18);
+                         font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                         letter-spacing:0.18em;color:#222222;text-transform:uppercase;padding:0.44em 1.1em;
+                         background-color:#ebebeb;background-color:rgba(255,255,255,0.88);margin:0.25em 0.31em;">
+                  11 – 14 APRIL
+                </div><!--
+             --><div class="pc-font-alt hero-pill txt-muted"
+                  style="display:inline-block;border:1px solid rgba(0,0,0,0.18);
+                         font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                         letter-spacing:0.18em;color:#222222;text-transform:uppercase;padding:0.44em 1.1em;
+                         background-color:#ebebeb;background-color:rgba(255,255,255,0.88);margin:0.25em 0.31em;">
+                  PILANI CAMPUS
+                </div>
+              </td></tr>
+
+              <!-- Hero lead -->
+              <tr><td align="center" style="padding-bottom:0.875em;">
+                <div class="pc-font-alt hero-lead txt-primary"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1.375em;font-weight:800;
+                         letter-spacing:-0.3px;line-height:140%;color:#111111;max-width:90%;margin:0 auto;">
+                  The most electric four days of your campus life are <span style="color:#7c3aed;">almost here.</span>
+                </div>
+              </td></tr>
+
+              <tr><td align="center" style="padding-bottom:0.875em;">
+                <div class="pc-font-alt hero-body txt-muted"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:300;
+                         line-height:170%;color:#333333;max-width:90%;margin:0 auto;">
+                  E-Summit 2026 brings together visionary founders, BITSian alumni who've built category-defining companies, investors writing real cheques, and the unstoppable energy of campus — all in one place, right here.
+                </div>
+              </td></tr>
+
+              <tr><td align="center">
+                <div class="pc-font-alt hero-italic txt-accent"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:500;
+                         font-style:italic;color:#7c3aed;">
+                  Come with an idea. Leave with a plan, a network, and a spark you won't forget.
+                </div>
+              </td></tr>
+
+            </table>
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ COUNTDOWN TIMER ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="countdown-pad bg-countdown" align="center"
+        style="padding:4.5% 4% 3.5%;background-color:#ebebeb;" bgcolor="#ebebeb">
+        <div class="pc-font-alt"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.625em;font-weight:600;
+                 letter-spacing:0.35em;color:#555555;text-transform:uppercase;margin-bottom:1em;">
+          ⏳ &nbsp; COUNTDOWN TO E-SUMMIT
+        </div>
+        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <td align="center">
+            <img class="countdown-img" src="https://gen.sendtric.com/countdown/cr0m4py6vm"
+              style="display:block;max-width:100%;height:auto;-webkit-filter:none!important;filter:none!important;" alt="Countdown to E-Summit 2026"/>
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ STATS BAR ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="bg-stats" style="background-color:#ebebeb;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(0,0,0,0.1);" bgcolor="#ebebeb">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+
+          <td class="stat-cell" align="center" valign="middle" width="25%"
+            style="padding:4% 2%;border-right:1px solid rgba(0,0,0,0.1);transition:background 0.2s;">
+            <div style="font-size:1.25em;margin-bottom:0.375em;">📅</div>
+            <div class="pc-font-alt stat-number"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.25em;font-weight:800;
+                     line-height:1;margin-bottom:0.375em;
+                     background:linear-gradient(135deg,#a78bfa 0%,#60a5fa 100%);
+                     -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                     background-clip:text;color:#111111;">4</div>
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                     letter-spacing:0.1em;color:#555555;text-transform:uppercase;line-height:1.5;">
+              Days of<br/>Innovation
+            </div>
+          </td>
+
+          <td class="stat-cell" align="center" valign="middle" width="25%"
+            style="padding:4% 2%;border-right:1px solid rgba(0,0,0,0.1);">
+            <div style="font-size:1.25em;margin-bottom:0.375em;">🎤</div>
+            <div class="pc-font-alt stat-number txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.25em;font-weight:800;
+                     line-height:1;margin-bottom:0.375em;color:#111111;">50+</div>
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                     letter-spacing:0.1em;color:#555555;text-transform:uppercase;line-height:1.5;">
+              Speakers &amp;<br/>Mentors
+            </div>
+          </td>
+
+          <td class="stat-cell" align="center" valign="middle" width="25%"
+            style="padding:4% 2%;border-right:1px solid rgba(0,0,0,0.1);">
+            <div style="font-size:1.25em;margin-bottom:0.375em;">⚡</div>
+            <div class="pc-font-alt stat-number txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.25em;font-weight:800;
+                     line-height:1;margin-bottom:0.375em;color:#111111;">7</div>
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                     letter-spacing:0.1em;color:#555555;text-transform:uppercase;line-height:1.5;">
+              Flagship<br/>Events
+            </div>
+          </td>
+
+          <td class="stat-cell" align="center" valign="middle" width="25%"
+            style="padding:4% 2%;">
+            <div style="font-size:1.25em;margin-bottom:0.375em;">🏛️</div>
+            <div class="pc-font-alt stat-number txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.25em;font-weight:800;
+                     line-height:1;margin-bottom:0.375em;color:#111111;">1</div>
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                     letter-spacing:0.1em;color:#555555;text-transform:uppercase;line-height:1.5;">
+              Campus.<br/>All of It.
+            </div>
+          </td>
+
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION LABEL ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td align="center"
+        style="background:linear-gradient(135deg,rgba(139,92,246,0.8) 0%,rgba(99,102,241,0.8) 100%);
+               padding:10px 6%;" bgcolor="#6d28d9">
+        <div class="pc-font-alt section-label txt-white"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:800;
+                 letter-spacing:0.4em;color:#ffffff;text-transform:uppercase;">
+          WHAT'S IN STORE
+        </div>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ EVENTS ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="section-pad bg-events"
+        style="padding:6.5% 6%;background-color:#ffffff;border-bottom:1px solid rgba(0,0,0,0.1);" bgcolor="#ffffff">
+
+        <!-- Card 1 — highlighted -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="event-card" bgcolor="#e8e8e8"
+            style="background-color:#e8e8e8;border:1px solid rgba(124,58,237,0.55);
+                   padding:4%;transition:all 0.2s;">
+            <div class="pc-font-alt txt-accent"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#7c3aed;text-transform:uppercase;margin-bottom:0.375em;">
+              Career · Hiring
+            </div>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+              <td valign="top" width="28" style="padding-top:0.125em;"><div style="font-size:1.125em;">★</div></td>
+              <td valign="top" style="padding-left:0.625em;">
+                <div class="pc-font-alt event-card-title txt-primary"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                         color:#111111;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+                  Internship &amp; Placement Drive
+                </div>
+                <div class="pc-font-alt event-card-body txt-muted"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                         line-height:162%;color:#555555;">
+                  Top startups and companies actively hiring — full-time roles, internships, and PPOs across tech, product, and business. Meet hiring managers face to face. Skip the cold applications.
+                </div>
+              </td>
+            </tr></table>
+          </td>
+        </tr></table><div style="height:14px;"></div>
+
+        <!-- Card 2 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="event-card" bgcolor="#ffffff"
+            style="background-color:#ffffff;border:1px solid rgba(124,58,237,0.3);
+                   padding:4%;transition:all 0.2s;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#555555;text-transform:uppercase;margin-bottom:0.375em;">
+              Inspiration · Founders
+            </div>
+            <div class="pc-font-alt event-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#111111;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              Keynotes &amp; Fireside Chats
+            </div>
+            <div class="pc-font-alt event-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#555555;">
+              Unfiltered stories from founders and veterans — pivots, failures, and breakthroughs. No fluff. Just signal.
+            </div>
+          </td>
+        </tr></table><div style="height:14px;"></div>
+
+        <!-- Card 3 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="event-card" bgcolor="#ffffff"
+            style="background-color:#ffffff;border:1px solid rgba(124,58,237,0.3);
+                   padding:4%;transition:all 0.2s;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#555555;text-transform:uppercase;margin-bottom:0.375em;">
+              Competition · Funding
+            </div>
+            <div class="pc-font-alt event-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#111111;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              Startup Pitch Competition
+            </div>
+            <div class="pc-font-alt event-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#555555;">
+              Pitch live to investors. Win cash prizes, incubation support, and mentorship from people who've built and backed real companies.
+            </div>
+          </td>
+        </tr></table><div style="height:14px;"></div>
+
+        <!-- Card 4 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="event-card" bgcolor="#ffffff"
+            style="background-color:#ffffff;border:1px solid rgba(124,58,237,0.3);
+                   padding:4%;transition:all 0.2s;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#555555;text-transform:uppercase;margin-bottom:0.375em;">
+              Build · Compete
+            </div>
+            <div class="pc-font-alt event-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#111111;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              Hackathons &amp; Ideathons
+            </div>
+            <div class="pc-font-alt event-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#555555;">
+              High-pressure, high-reward sprints. Build a working prototype or crack a real-world problem in 24 hours with your team.
+            </div>
+          </td>
+        </tr></table><div style="height:14px;"></div>
+
+        <!-- Card 5 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="event-card" bgcolor="#ffffff"
+            style="background-color:#ffffff;border:1px solid rgba(124,58,237,0.3);
+                   padding:4%;transition:all 0.2s;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#555555;text-transform:uppercase;margin-bottom:0.375em;">
+              Skill · Strategy
+            </div>
+            <div class="pc-font-alt event-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#111111;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              Workshops &amp; Masterclasses
+            </div>
+            <div class="pc-font-alt event-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#555555;">
+              Hands-on sessions on product-market fit, fundraising, lean methodology, and growth. Learn it in the morning, apply it by evening.
+            </div>
+          </td>
+        </tr></table><div style="height:14px;"></div>
+
+        <!-- Card 6 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="event-card" bgcolor="#ffffff"
+            style="background-color:#ffffff;border:1px solid rgba(124,58,237,0.3);
+                   padding:4%;transition:all 0.2s;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#555555;text-transform:uppercase;margin-bottom:0.375em;">
+              Mentorship · 1:1
+            </div>
+            <div class="pc-font-alt event-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#111111;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              Mentor Office Hours
+            </div>
+            <div class="pc-font-alt event-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#555555;">
+              Book a private slot with a founder, investor, or engineer. Bring your idea, your resume, your doubts — all fair game.
+            </div>
+          </td>
+        </tr></table><div style="height:14px;"></div>
+
+        <!-- Card 7 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="event-card" bgcolor="#ffffff"
+            style="background-color:#ffffff;border:1px solid rgba(124,58,237,0.3);
+                   padding:4%;transition:all 0.2s;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#555555;text-transform:uppercase;margin-bottom:0.375em;">
+              Connect · Explore
+            </div>
+            <div class="pc-font-alt event-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#111111;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              Networking Expo
+            </div>
+            <div class="pc-font-alt event-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#555555;">
+              Live demos from incubated ventures, company booths, and hundreds of sharp peers ready to build something together.
+            </div>
+          </td>
+        </tr></table>
+
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ PULL QUOTE ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="quote-pad bg-quote"
+        style="padding:7% 6.5%;background-color:#f0f0f0;
+               border-top:1px solid rgba(0,0,0,0.12);
+               border-bottom:1px solid rgba(0,0,0,0.12);
+               border-left:3px solid #7c3aed;"
+        bgcolor="#f0f0f0">
+        <div class="pc-font-alt quote-text txt-primary"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1.75em;font-weight:800;
+                 letter-spacing:-0.3px;line-height:145%;color:#111111;margin-bottom:1.125em;">
+          The next <span style="color:#7c3aed;">BITSian unicorn</span> will be built by someone who showed up — curious, hungry, and ready to connect the dots.
+        </div>
+        <div class="pc-font-alt txt-label"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.625em;font-weight:500;
+                 letter-spacing:0.22em;color:#888888;text-transform:uppercase;">
+          — E-Summit 2026 · PIEDS · BITS Pilani
+        </div>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ CTA ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="cta-pad bg-cta" style="padding:8% 6.5% 7%;background-color:#ebebeb;" bgcolor="#ebebeb">
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td style="padding-bottom:0.625em;">
+          <div class="pc-font-alt txt-label"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.625em;font-weight:500;
+                   letter-spacing:0.3em;color:#555555;text-transform:uppercase;">
+            ▸ &nbsp; Your move, BITSian
+          </div>
+        </td></tr>
+        </table>
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td style="padding-bottom:1.25em;">
+          <div class="pc-font-alt cta-head txt-primary"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.125em;font-weight:800;
+                   letter-spacing:-0.4px;line-height:118%;color:#111111;">
+            Ready to build<br/>something <span style="color:#7c3aed;">real?</span>
+          </div>
+        </td></tr>
+        </table>
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td style="padding-bottom:2em;">
+          <div class="pc-font-alt cta-body txt-muted"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.9375em;font-weight:300;
+                   line-height:172%;color:#555555;">
+            Follow <span style="color:#111111;font-weight:700;">PIEDS</span> on Instagram for speaker announcements, schedule drops, and early-access event slots. Stay in the loop — everything happens there first.
+          </div>
+        </td></tr>
+        </table>
+
+        <!-- CTA Button -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="min-width:100%;">
+        <tr><th valign="top" align="center" style="text-align:center;font-weight:normal;line-height:100%;padding-bottom:2em;">
+          <!--[if mso]><table border="0" cellpadding="0" cellspacing="0" role="presentation" align="center"><tr><td valign="middle" align="center" style="background-color:#8b5cf6;text-align:center;padding:18px 52px;" bgcolor="#8b5cf6"><a class="pc-font-alt" style="display:inline-block;text-decoration:none;font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-weight:800;font-size:13px;line-height:140%;letter-spacing:0.22em;text-align:center;color:#ffffff;text-transform:uppercase;" href="https://www.instagram.com/bitspreneur/?hl=en">VIEW MORE ▸</a></td></tr></table><![endif]-->
+          <!--[if !mso]><!-->
+          <a class="btn-primary"
+            style="display:inline-block;box-sizing:border-box;
+                   background:linear-gradient(135deg,#8b5cf6 0%,#6366f1 100%);
+                   padding:1.125em 8%;
+                   font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-weight:800;
+                   font-size:0.8125em;line-height:140%;letter-spacing:0.22em;
+                   color:#ffffff;text-align:center;text-decoration:none;
+                   -webkit-text-size-adjust:none;text-transform:uppercase;
+                   transition:opacity 0.2s;"
+            href="https://www.instagram.com/bitspreneur/?hl=en" target="_blank">
+            VIEW MORE &nbsp;▸
+          </a>
+          <!--<![endif]-->
+        </th></tr>
+        </table>
+
+        <!-- Audience tags -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td class="audience-tags" style="border-top:1px solid rgba(0,0,0,0.1);padding-top:1.5em;">
+          <div class="pc-font-alt"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                   letter-spacing:0.14em;color:#555555;text-transform:uppercase;line-height:2.6;">
+            Open to: &nbsp;
+            <span class="audience-tag" style="background-color:rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.15);padding:0.25em 0.75em;color:#7c3aed;">Engineers</span> &nbsp;
+            <span class="audience-tag" style="background-color:rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.15);padding:0.25em 0.75em;color:#7c3aed;">Scientists</span> &nbsp;
+            <span class="audience-tag" style="background-color:rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.15);padding:0.25em 0.75em;color:#7c3aed;">Humanists</span> &nbsp;
+            <span class="audience-tag" style="background-color:rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.15);padding:0.25em 0.75em;color:#7c3aed;">First-Years</span> &nbsp;
+            <span class="audience-tag" style="background-color:rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.15);padding:0.25em 0.75em;color:#7c3aed;">Everyone</span>
+          </div>
+        </td></tr>
+        </table>
+
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ FOOTER ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="footer-pad bg-header"
+        style="background-color:#ffffff;border-top:1px solid rgba(0,0,0,0.1);padding:5% 6.5%;"
+        bgcolor="#ffffff">
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td align="center" style="padding-bottom:16px;">
+          <div class="pc-font-alt footer-brand txt-primary"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                   color:#111111;margin-bottom:0.25em;">
+            PIEDS
+          </div>
+          <div class="pc-font-alt footer-text txt-label"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:300;
+                   letter-spacing:0.08em;color:#555555;line-height:2;">
+            Pilani Innovation &amp; Entrepreneurship Development Society<br/>
+            BITS Pilani · Pilani Campus · Rajasthan, India
+          </div>
+        </td></tr>
+        </table>
+
+        <table class="footer-social" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td align="center" style="border-top:1px solid rgba(0,0,0,0.1);padding-top:1.125em;">
+          <a class="social-link" href="https://instagram.com/pieds_bits" target="_blank"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:500;
+                   letter-spacing:0.15em;color:#7c3aed;text-decoration:none;text-transform:uppercase;
+                   margin:0 0.875em;transition:color 0.2s;">Instagram</a>
+          <a class="social-link" href="https://linkedin.com/company/pieds-bits-pilani" target="_blank"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:500;
+                   letter-spacing:0.15em;color:#7c3aed;text-decoration:none;text-transform:uppercase;
+                   margin:0 0.875em;transition:color 0.2s;">LinkedIn</a>
+        </td></tr>
+        </table>
+
+        <div style="height:1.25em;"></div>
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td align="center">
+          <div class="pc-font-alt footer-text"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.625em;font-weight:300;
+                   letter-spacing:0.08em;color:#888888;text-transform:uppercase;line-height:2;">
+            You received this because you are a student or faculty at BITS Pilani.<br/>
+            &copy; 2026 PIEDS, BITS Pilani. All rights reserved.
+          </div>
+        </td></tr>
+        </table>
+
+      </td>
+    </tr>
+    </table>
+
+
+    </td></tr>
+    </table>
+
+  </td></tr>
+  </table>
+
+</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="only dark">
+  <title>Build for Bharat with BITSians | Join Dihadi</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    /* ── Reset ─────────────────────────────── */
+    body,
+    table,
+    td,
+    p,
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    span,
+    div {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      box-sizing: border-box;
+    }
+
+    table {
+      border-collapse: collapse !important;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      border: 0;
+      outline: none;
+      display: block;
+    }
+
+    /* ── Force dark ─────────────────────────── */
+    :root {
+      color-scheme: only dark;
+    }
+
+    /* ── [data-ogsc] — Gmail iOS dark mode ──── */
+    [data-ogsc] .bg-page {
+      background-color: #111111 !important;
+      background-image: linear-gradient(#111111, #111111) !important;
+    }
+
+    [data-ogsc] .bg-header {
+      background-color: #0d0d0d !important;
+      background-image: linear-gradient(#0d0d0d, #0d0d0d) !important;
+    }
+
+    [data-ogsc] .bg-hero {
+      background-color: #1a0c00 !important;
+      background-image: linear-gradient(#1a0c00, #1a0c00) !important;
+    }
+
+    [data-ogsc] .bg-card {
+      background-color: #1e1e1e !important;
+      background-image: linear-gradient(#1e1e1e, #1e1e1e) !important;
+    }
+
+    [data-ogsc] .bg-section {
+      background-color: #161616 !important;
+      background-image: linear-gradient(#161616, #161616) !important;
+    }
+
+    [data-ogsc] .bg-footer {
+      background-color: #0a0a0a !important;
+      background-image: linear-gradient(#0a0a0a, #0a0a0a) !important;
+    }
+
+    [data-ogsc] .bg-stat {
+      background-color: #221500 !important;
+      background-image: linear-gradient(#221500, #221500) !important;
+    }
+
+    [data-ogsc] .bg-role {
+      background-color: #1a1a1a !important;
+      background-image: linear-gradient(#1a1a1a, #1a1a1a) !important;
+    }
+
+    [data-ogsc] .bg-cta {
+      background-color: #140d00 !important;
+      background-image: linear-gradient(#140d00, #140d00) !important;
+    }
+
+    [data-ogsc] .txt-white {
+      color: #ffffff !important;
+    }
+
+    [data-ogsc] .txt-muted {
+      color: #9ca3af !important;
+    }
+
+    [data-ogsc] .txt-faint {
+      color: #555555 !important;
+    }
+
+    [data-ogsc] .txt-orange {
+      color: #F68213 !important;
+    }
+
+    [data-ogsc] .border-orange {
+      border-color: #F68213 !important;
+    }
+
+    [data-ogsc] img {
+      filter: none !important;
+    }
+
+    [data-ogsc] .role-icon-bg {
+      background-color: #2a1800 !important;
+      background-image: linear-gradient(#2a1800, #2a1800) !important;
+    }
+
+    [data-ogsc] .gmail-blend-screen {
+      background-color: #000000 !important;
+      mix-blend-mode: screen !important;
+    }
+
+    [data-ogsc] .gmail-blend-difference {
+      background-color: #000000 !important;
+      mix-blend-mode: difference !important;
+    }
+
+    /* ── u + .body — Gmail web dark mode ───── */
+    u+.body {
+      background-color: #111111 !important;
+    }
+
+    u+.body .bg-page {
+      background-color: #111111 !important;
+      background-image: linear-gradient(#111111, #111111) !important;
+    }
+
+    u+.body .bg-header {
+      background-color: #0d0d0d !important;
+    }
+
+    u+.body .bg-hero {
+      background-color: #1a0c00 !important;
+    }
+
+    u+.body .bg-card {
+      background-color: #1e1e1e !important;
+    }
+
+    u+.body .bg-section {
+      background-color: #161616 !important;
+    }
+
+    u+.body .bg-footer {
+      background-color: #0a0a0a !important;
+    }
+
+    u+.body .bg-stat {
+      background-color: #221500 !important;
+    }
+
+    u+.body .bg-role {
+      background-color: #1a1a1a !important;
+    }
+
+    u+.body .bg-cta {
+      background-color: #140d00 !important;
+    }
+
+    u+.body .txt-white {
+      color: #ffffff !important;
+    }
+
+    u+.body .txt-muted {
+      color: #9ca3af !important;
+    }
+
+    u+.body .txt-faint {
+      color: #555555 !important;
+    }
+
+    u+.body .txt-orange {
+      color: #F68213 !important;
+    }
+
+    u+.body img {
+      filter: none !important;
+    }
+
+    u+.body .role-icon-bg {
+      background-color: #2a1800 !important;
+    }
+
+    /* ── Apple Mail dark override ────────────── */
+    @media (prefers-color-scheme: dark) {
+      .bg-page {
+        background-color: #111111 !important;
+      }
+
+      .bg-header {
+        background-color: #0d0d0d !important;
+      }
+
+      .bg-hero {
+        background-color: #1a0c00 !important;
+      }
+
+      .bg-card {
+        background-color: #1e1e1e !important;
+      }
+
+      .bg-section {
+        background-color: #161616 !important;
+      }
+
+      .bg-footer {
+        background-color: #0a0a0a !important;
+      }
+
+      .bg-stat {
+        background-color: #221500 !important;
+      }
+
+      .bg-role {
+        background-color: #1a1a1a !important;
+      }
+
+      .bg-cta {
+        background-color: #140d00 !important;
+      }
+
+      .txt-white {
+        color: #ffffff !important;
+      }
+
+      .txt-muted {
+        color: #9ca3af !important;
+      }
+
+      .txt-faint {
+        color: #555555 !important;
+      }
+
+      .txt-orange {
+        color: #F68213 !important;
+      }
+
+      .role-icon-bg {
+        background-color: #2a1800 !important;
+      }
+
+      img {
+        filter: none !important;
+      }
+    }
+
+    /* ── Responsive — mobile ─────────────────── */
+    @media only screen and (max-width: 620px) {
+      .email-wrap {
+        width: 100% !important;
+      }
+
+      .hero-title {
+        font-size: 1.7em !important;
+      }
+
+      .team-cell {
+        width: 33% !important;
+      }
+
+      .stat-val {
+        font-size: 1.5em !important;
+      }
+
+      .hide-mobile {
+        display: none !important;
+      }
+
+      .full-mobile {
+        width: 100% !important;
+        display: block !important;
+      }
+
+      .pad-mobile {
+        padding: 1.2em 1em !important;
+      }
+    }
+
+    @media only screen and (max-width: 420px) {
+      .hero-title {
+        font-size: 1.45em !important;
+      }
+
+      .stat-val {
+        font-size: 1.3em !important;
+      }
+
+      .team-name {
+        font-size: 0.7em !important;
+      }
+    }
+  </style>
+</head>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<body class="body bg-page"
+  style="margin:0;padding:0;background-color:#111111;font-family:'Inter',Helvetica,Arial,sans-serif;color:#ffffff;">
+
+  <!-- Gmail iOS blend-mode inversion shield -->
+  <div class="gmail-blend-screen" style="background-color:transparent;">
+    <div class="gmail-blend-difference" style="background-color:transparent;">
+
+      <!-- ── Page wrapper ── -->
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-page"
+        style="background-color:#111111;">
+        <tr>
+          <td align="center" style="padding:1.25em 0.5em 2em;">
+
+            <!-- ── Email container (600px max) ── -->
+            <table role="presentation" class="email-wrap" style="width:100%;max-width:600px;" cellpadding="0"
+              cellspacing="0" border="0">
+
+              <!-- ════════════════════════════════════
+               HEADER — Logo bar
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-header"
+                  style="background-color:#0d0d0d;border-radius:1em 1em 0 0;padding:1em 1.5em;border-bottom:2px solid #F68213;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="vertical-align:middle;">
+                        <img src="https://dihadi.co.in/brand/dihadi_logo.svg" alt="Dihadi" height="26"
+                          style="height:1.625em;width:auto;display:block;">
+                      </td>
+                      <td style="text-align:right;vertical-align:middle;">
+                        <span class="txt-white"
+                          style="background-color:#F68213;color:#111111;font-weight:800;font-size:0.6em;padding:0.35em 0.85em;border-radius:2em;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;">
+                          Now Hiring
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════               FUNDED HIGHLIGHT BANNER
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-header" style="background-color:#0d0d0d;padding:0 1.5em 0.9em;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                    style="background-color:#111111;border-radius:0 0 0.75em 0.75em;">
+                    <tr>
+                      <td style="padding:0.65em 1.2em;text-align:center;">
+                        <span class="txt-faint"
+                          style="color:#555555;font-size:0.6em;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;">Startup
+                          Funded</span>
+                        &nbsp;&nbsp;
+                        <span class="txt-orange"
+                          style="color:#F68213;font-size:1.05em;font-weight:800;letter-spacing:0.03em;">₹11
+                          Lakhs+</span>
+                        <span class="txt-faint"
+                          style="color:#555555;font-size:0.6em;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-left:0.3em;">raised</span>
+                        &nbsp;&nbsp;
+                        <span
+                          style="background-color:rgba(246,130,19,0.1);border:1px solid rgba(246,130,19,0.25);color:#F68213;font-size:0.58em;font-weight:600;padding:0.25em 0.65em;border-radius:0.3em;letter-spacing:0.03em;white-space:nowrap;">Genesis
+                          EIR · ₹10L</span>
+                        &nbsp;
+                        <span
+                          style="background-color:rgba(246,130,19,0.1);border:1px solid rgba(246,130,19,0.25);color:#F68213;font-size:0.58em;font-weight:600;padding:0.25em 0.65em;border-radius:0.3em;letter-spacing:0.03em;white-space:nowrap;">YMF
+                          Fellowship</span>
+                        &nbsp;
+                        <span
+                          style="background-color:rgba(246,130,19,0.1);border:1px solid rgba(246,130,19,0.25);color:#F68213;font-size:0.58em;font-weight:600;padding:0.25em 0.65em;border-radius:0.3em;letter-spacing:0.03em;white-space:nowrap;">IIM-K
+                          Incubated</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════               HERO — Headline + Impact chips
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-hero"
+                  style="background-color:#1a0c00;padding:2.5em 1.5em 2em;text-align:center;background-image:linear-gradient(150deg,#1a0c00 0%,#111111 60%,#1a0c00 100%);">
+
+                  <!-- Backed-by pill -->
+                  <div
+                    style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;font-size:0.65em;font-weight:600;padding:0.4em 1em;border-radius:2em;margin-bottom:1.25em;letter-spacing:0.08em;text-transform:uppercase;">
+                    Accel YMF &nbsp;·&nbsp; IIM Kashipur &nbsp;·&nbsp; ₹11L+ Raised
+                  </div>
+
+                  <!-- Main headline -->
+                  <h1 class="hero-title txt-white"
+                    style="margin:0 0 0.4em;color:#ffffff;font-size:2.1em;font-weight:900;line-height:1.1;letter-spacing:-0.025em;">
+                    Build for <span class="txt-orange" style="color:#F68213;">Bharat.</span><br>
+                    Build with BITSians.
+                  </h1>
+
+                  <!-- Sub-heading -->
+                  <p class="txt-muted"
+                    style="color:#9ca3af;font-size:0.9em;margin:0 0 1.75em;line-height:1.6;max-width:400px;margin-left:auto;margin-right:auto;">
+                    Your seniors are fixing daily wage unemployment. <strong class="txt-white"
+                      style="color:#ffffff;">8–12 million workers</strong> go jobless every day in India. We built an AI
+                    to end that.
+                  </p>
+
+                  <!-- 3-stat strip -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="width:33%;padding:0 0.3em;text-align:center;">
+                        <div class="bg-stat"
+                          style="background-color:#221500;border:1px solid rgba(246,130,19,0.25);border-radius:0.75em;padding:0.85em 0.3em;">
+                          <div class="stat-val txt-orange"
+                            style="color:#F68213;font-size:1.6em;font-weight:800;line-height:1;">₹11L+</div>
+                          <div class="txt-faint"
+                            style="color:#777777;font-size:0.58em;margin-top:0.35em;text-transform:uppercase;letter-spacing:0.06em;">
+                            Grants raised</div>
+                        </div>
+                      </td>
+                      <td style="width:34%;padding:0 0.3em;text-align:center;">
+                        <div class="bg-stat"
+                          style="background-color:#221500;border:1px solid rgba(246,130,19,0.45);border-radius:0.75em;padding:0.85em 0.3em;">
+                          <div class="stat-val txt-orange"
+                            style="color:#F68213;font-size:1.6em;font-weight:800;line-height:1;">12M</div>
+                          <div class="txt-faint"
+                            style="color:#777777;font-size:0.58em;margin-top:0.35em;text-transform:uppercase;letter-spacing:0.06em;">
+                            Daily jobless</div>
+                        </div>
+                      </td>
+                      <td style="width:33%;padding:0 0.3em;text-align:center;">
+                        <div class="bg-stat"
+                          style="background-color:#221500;border:1px solid rgba(246,130,19,0.25);border-radius:0.75em;padding:0.85em 0.3em;">
+                          <div class="stat-val txt-orange"
+                            style="color:#F68213;font-size:1.6em;font-weight:800;line-height:1;">0→1</div>
+                          <div class="txt-faint"
+                            style="color:#777777;font-size:0.58em;margin-top:0.35em;text-transform:uppercase;letter-spacing:0.06em;">
+                            You'll build it</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════
+               WHAT IS DIHADI — Intro strip
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-card"
+                  style="background-color:#1e1e1e;padding:1.6em 1.5em 1.4em;border-top:1px solid #2a2a2a;">
+
+                  <p class="txt-faint"
+                    style="color:#666666;font-size:0.65em;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 0.7em;">
+                    What we're building</p>
+
+                  <p class="txt-white" style="color:#ffffff;font-size:0.95em;line-height:1.7;margin:0 0 1.25em;">
+                    Dihadi is an <strong class="txt-orange" style="color:#F68213;">Agentic AI workforce
+                      platform</strong> that connects
+                    blue-collar workers with contractors <em>instantly</em> — via
+                    <strong class="txt-white" style="color:#ffffff;">Voice &nbsp;·&nbsp; WhatsApp &nbsp;·&nbsp; Mobile
+                      App.</strong>
+                    Founded by BITSians, built for 400 million daily wage workers.
+                  </p>
+
+                  <!-- Backed-by logos row -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="width:33%;padding-right:0.4em;">
+                        <div
+                          style="background-color:#151515;border:1px solid #2e2e2e;border-radius:0.6em;padding:0.55em 0.6em;text-align:center;min-height:2.5em;vertical-align:middle;">
+                          <img src="https://dihadi.co.in/brand/YMP.svg" alt="Accel YMF" height="22"
+                            style="height:1.375em;width:auto;display:block;margin:0 auto;filter:brightness(0) invert(1);">
+                        </div>
+                      </td>
+                      <td style="width:34%;padding:0 0.2em;">
+                        <div
+                          style="background-color:#151515;border:1px solid #2e2e2e;border-radius:0.6em;padding:0.55em 0.6em;text-align:center;min-height:2.5em;vertical-align:middle;">
+                          <img src="https://dihadi.co.in/brand/IIMKashipur.svg" alt="IIM Kashipur" height="22"
+                            style="height:1.375em;width:auto;display:block;margin:0 auto;filter:brightness(0) invert(1);">
+                        </div>
+                      </td>
+                      <td style="width:33%;padding-left:0.4em;">
+                        <div
+                          style="background-color:#151515;border:1px solid #2e2e2e;border-radius:0.6em;padding:0.55em 0.6em;text-align:center;min-height:2.5em;vertical-align:middle;">
+                          <img src="https://dihadi.co.in/brand/FIED.svg" alt="FIED GENESIS" height="22"
+                            style="height:1.375em;width:auto;display:block;margin:0 auto;filter:brightness(0) invert(1);">
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════
+               OPEN ROLES — 3 role cards
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-section" style="background-color:#161616;padding:1.8em 1.5em 1em;">
+                  <p class="txt-faint"
+                    style="color:#666666;font-size:0.65em;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 1em;">
+                    Open Roles</p>
+
+                  <!-- ── Role 1: Research & Product ── -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-role"
+                    style="background-color:#1a1a1a;border-radius:0.75em;margin-bottom:0.75em;border:1px solid #2a2a2a;">
+                    <tr>
+                      <td style="padding:1.1em 1.2em;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="width:3em;vertical-align:top;">
+                              <div class="role-icon-bg"
+                                style="width:2.6em;height:2.6em;background-color:#2a1800;border-radius:0.5em;text-align:center;line-height:2.6em;font-size:1em;">
+                                🔍</div>
+                            </td>
+                            <td style="vertical-align:top;padding-left:0.85em;">
+                              <div style="display:inline-block;">
+                                <span class="txt-orange"
+                                  style="color:#F68213;font-weight:700;font-size:0.88em;">Research &amp; Product</span>
+                                <span
+                                  style="background-color:#F6821218;color:#F68213;font-size:0.55em;font-weight:600;padding:0.25em 0.6em;border-radius:2em;margin-left:0.5em;text-transform:uppercase;letter-spacing:0.06em;vertical-align:middle;">Intern</span>
+                              </div>
+                              <p class="txt-muted"
+                                style="color:#9ca3af;font-size:0.78em;line-height:1.55;margin:0.3em 0 0;">
+                                Drive market validation · Write core PRDs · Translate user pain into scalable product.
+                                <strong class="txt-white" style="color:#ffffff;">You own the 0→1 journey.</strong>
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- ── Role 2: UI/UX ── -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-role"
+                    style="background-color:#1a1a1a;border-radius:0.75em;margin-bottom:0.75em;border:1px solid #2a2a2a;">
+                    <tr>
+                      <td style="padding:1.1em 1.2em;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="width:3em;vertical-align:top;">
+                              <div class="role-icon-bg"
+                                style="width:2.6em;height:2.6em;background-color:#2a1800;border-radius:0.5em;text-align:center;line-height:2.6em;font-size:1em;">
+                                🎨</div>
+                            </td>
+                            <td style="vertical-align:top;padding-left:0.85em;">
+                              <div style="display:inline-block;">
+                                <span class="txt-orange" style="color:#F68213;font-weight:700;font-size:0.88em;">App
+                                  Designer — UI/UX</span>
+                                <span
+                                  style="background-color:#F6821218;color:#F68213;font-size:0.55em;font-weight:600;padding:0.25em 0.6em;border-radius:2em;margin-left:0.5em;text-transform:uppercase;letter-spacing:0.06em;vertical-align:middle;">Intern</span>
+                              </div>
+                              <p class="txt-muted"
+                                style="color:#9ca3af;font-size:0.78em;line-height:1.55;margin:0.3em 0 0;">
+                                Design the mobile app + contractor dashboards.
+                                <strong class="txt-white" style="color:#ffffff;">Build interfaces that reach the Next
+                                  Billion Users.</strong>
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- ── Role 3: Marketing ── -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-role"
+                    style="background-color:#1a1a1a;border-radius:0.75em;margin-bottom:1em;border:1px solid #2a2a2a;">
+                    <tr>
+                      <td style="padding:1.1em 1.2em;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="width:3em;vertical-align:top;">
+                              <div class="role-icon-bg"
+                                style="width:2.6em;height:2.6em;background-color:#2a1800;border-radius:0.5em;text-align:center;line-height:2.6em;font-size:1em;">
+                                📣</div>
+                            </td>
+                            <td style="vertical-align:top;padding-left:0.85em;">
+                              <div style="display:inline-block;">
+                                <span class="txt-orange"
+                                  style="color:#F68213;font-weight:700;font-size:0.88em;">Marketing &amp; Content</span>
+                                <span
+                                  style="background-color:#F6821218;color:#F68213;font-size:0.55em;font-weight:600;padding:0.25em 0.6em;border-radius:2em;margin-left:0.5em;text-transform:uppercase;letter-spacing:0.06em;vertical-align:middle;">Intern</span>
+                              </div>
+                              <p class="txt-muted"
+                                style="color:#9ca3af;font-size:0.78em;line-height:1.55;margin:0.3em 0 0;">
+                                Video · Design · Writing. Tribalise the brand on social media.
+                                <strong class="txt-white" style="color:#ffffff;">Build community and brand voice from
+                                  zero.</strong>
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════
+               WHY JOIN — Benefits
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-card"
+                  style="background-color:#1e1e1e;padding:1.8em 1.5em;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;">
+                  <p class="txt-faint"
+                    style="color:#666666;font-size:0.65em;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 1.1em;">
+                    Why build with us?</p>
+
+                  <!-- Benefit 1 -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:1em;">
+                    <tr>
+                      <td style="width:2.2em;vertical-align:top;padding-top:0.05em;">
+                        <div
+                          style="width:1.8em;height:1.8em;background-color:#F6821215;border-radius:50%;text-align:center;line-height:1.8em;font-size:0.85em;">
+                          ⚡</div>
+                      </td>
+                      <td style="vertical-align:top;padding-left:0.75em;">
+                        <div class="txt-white" style="color:#ffffff;font-weight:600;font-size:0.88em;">Elite Mentorship
+                        </div>
+                        <div class="txt-muted"
+                          style="color:#9ca3af;font-size:0.77em;line-height:1.55;margin-top:0.2em;">
+                          Direct access to <strong class="txt-white" style="color:#ffffff;">Dinesh Katiyar &amp; Subrata
+                            Mitra (Accel)</strong>,
+                          Abhishek Ballabh (ExtraaEdge), Avinash Raghava (SaaSBoomi) and more.
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Benefit 2 -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:1em;">
+                    <tr>
+                      <td style="width:2.2em;vertical-align:top;padding-top:0.05em;">
+                        <div
+                          style="width:1.8em;height:1.8em;background-color:#F6821215;border-radius:50%;text-align:center;line-height:1.8em;font-size:0.85em;">
+                          🚀</div>
+                      </td>
+                      <td style="vertical-align:top;padding-left:0.75em;">
+                        <div class="txt-white" style="color:#ffffff;font-weight:600;font-size:0.88em;">Real Ownership
+                        </div>
+                        <div class="txt-muted"
+                          style="color:#9ca3af;font-size:0.77em;line-height:1.55;margin-top:0.2em;">
+                          Front-row seat to a <strong class="txt-white" style="color:#ffffff;">funded startup</strong>.
+                          Your work doesn't sit in a backlog — it ships.
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Benefit 3 -->
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="width:2.2em;vertical-align:top;padding-top:0.05em;">
+                        <div
+                          style="width:1.8em;height:1.8em;background-color:#F6821215;border-radius:50%;text-align:center;line-height:1.8em;font-size:0.85em;">
+                          💰</div>
+                      </td>
+                      <td style="vertical-align:top;padding-left:0.75em;">
+                        <div class="txt-white" style="color:#ffffff;font-weight:600;font-size:0.88em;">The Perks</div>
+                        <div class="txt-muted"
+                          style="color:#9ca3af;font-size:0.77em;line-height:1.55;margin-top:0.2em;">
+                          Negotiable stipend &nbsp;·&nbsp; Experience certificate &nbsp;·&nbsp; Learning curve unlike
+                          any PPO.
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════
+               MENTORS & ADVISORS
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-card" style="background-color:#1e1e1e;padding:1.8em 1.5em;border-top:1px solid #2a2a2a;">
+                  <p class="txt-faint"
+                    style="color:#666666;font-size:0.65em;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 1.1em;">
+                    Mentors &amp; Advisors</p>
+
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <!-- Dinesh Katiyar -->
+                      <td style="width:50%;padding:0 0.35em 0.7em 0;vertical-align:top;">
+                        <table cellpadding="0" cellspacing="0" border="0"
+                          style="background-color:#161616;border:1px solid #2a2a2a;border-radius:0.65em;width:100%;">
+                          <tr>
+                            <td style="padding:0.7em 0.85em;">
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="vertical-align:middle;padding-right:0.6em;">
+                                    <div
+                                      style="width:2.8em;height:2.8em;border-radius:50%;overflow:hidden;border:2px solid rgba(246,130,19,0.4);background-color:rgba(246,130,19,0.08);">
+                                      <img
+                                        src="https://media.licdn.com/dms/image/C5603AQFb5x1sRpFqbA/profile-displayphoto-shrink_200_200/0/1517480344555"
+                                        alt="Dinesh Katiyar" width="45" height="45"
+                                        style="width:2.8em;height:2.8em;border-radius:50%;display:block;">
+                                    </div>
+                                  </td>
+                                  <td style="vertical-align:middle;">
+                                    <div class="txt-white"
+                                      style="color:#ffffff;font-weight:600;font-size:0.75em;line-height:1.2;">Dinesh
+                                      Katiyar</div>
+                                    <div class="txt-orange" style="color:#F68213;font-size:0.62em;margin-top:0.1em;">
+                                      Accel Partners</div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- Subrata Mitra -->
+                      <td style="width:50%;padding:0 0 0.7em 0.35em;vertical-align:top;">
+                        <table cellpadding="0" cellspacing="0" border="0"
+                          style="background-color:#161616;border:1px solid #2a2a2a;border-radius:0.65em;width:100%;">
+                          <tr>
+                            <td style="padding:0.7em 0.85em;">
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="vertical-align:middle;padding-right:0.6em;">
+                                    <div
+                                      style="width:2.8em;height:2.8em;border-radius:50%;overflow:hidden;border:2px solid rgba(246,130,19,0.4);background-color:rgba(246,130,19,0.08);">
+                                      <img
+                                        src="https://media.licdn.com/dms/image/C4D03AQHWw4q6E_RHCA/profile-displayphoto-shrink_200_200/0/1516965735069"
+                                        alt="Subrata Mitra" width="45" height="45"
+                                        style="width:2.8em;height:2.8em;border-radius:50%;display:block;">
+                                    </div>
+                                  </td>
+                                  <td style="vertical-align:middle;">
+                                    <div class="txt-white"
+                                      style="color:#ffffff;font-weight:600;font-size:0.75em;line-height:1.2;">Subrata
+                                      Mitra</div>
+                                    <div class="txt-orange" style="color:#F68213;font-size:0.62em;margin-top:0.1em;">
+                                      Accel Partners</div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- Abhishek Ballabh -->
+                      <td style="width:50%;padding:0 0.35em 0 0;vertical-align:top;">
+                        <table cellpadding="0" cellspacing="0" border="0"
+                          style="background-color:#161616;border:1px solid #2a2a2a;border-radius:0.65em;width:100%;">
+                          <tr>
+                            <td style="padding:0.7em 0.85em;">
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="vertical-align:middle;padding-right:0.6em;">
+                                    <div
+                                      style="width:2.8em;height:2.8em;border-radius:50%;background-color:rgba(246,130,19,0.08);border:2px solid rgba(246,130,19,0.4);text-align:center;line-height:2.8em;">
+                                      <span class="txt-orange"
+                                        style="color:#F68213;font-weight:700;font-size:0.78em;">AB</span>
+                                    </div>
+                                  </td>
+                                  <td style="vertical-align:middle;">
+                                    <div class="txt-white"
+                                      style="color:#ffffff;font-weight:600;font-size:0.75em;line-height:1.2;">Abhishek
+                                      Ballabh</div>
+                                    <div class="txt-orange" style="color:#F68213;font-size:0.62em;margin-top:0.1em;">
+                                      ExtraaEdge</div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- Avinash Raghava -->
+                      <td style="width:50%;padding:0 0 0 0.35em;vertical-align:top;">
+                        <table cellpadding="0" cellspacing="0" border="0"
+                          style="background-color:#161616;border:1px solid #2a2a2a;border-radius:0.65em;width:100%;">
+                          <tr>
+                            <td style="padding:0.7em 0.85em;">
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="vertical-align:middle;padding-right:0.6em;">
+                                    <div
+                                      style="width:2.8em;height:2.8em;border-radius:50%;background-color:rgba(246,130,19,0.08);border:2px solid rgba(246,130,19,0.4);text-align:center;line-height:2.8em;">
+                                      <span class="txt-orange"
+                                        style="color:#F68213;font-weight:700;font-size:0.78em;">AR</span>
+                                    </div>
+                                  </td>
+                                  <td style="vertical-align:middle;">
+                                    <div class="txt-white"
+                                      style="color:#ffffff;font-weight:600;font-size:0.75em;line-height:1.2;">Avinash
+                                      Raghava</div>
+                                    <div class="txt-orange" style="color:#F68213;font-size:0.62em;margin-top:0.1em;">
+                                      SaaSBoomi</div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════
+               TEAM — Founder avatars
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-section" style="background-color:#161616;padding:1.8em 1.5em 1.5em;text-align:center;">
+                  <p class="txt-faint"
+                    style="color:#666666;font-size:0.65em;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin:0 0 1.2em;text-align:left;">
+                    Who you'll work with</p>
+
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <!-- Himanshu COO -->
+                      <td class="team-cell" style="width:33%;text-align:center;padding:0 0.4em;">
+                        <div
+                          style="display:inline-block;width:3.6em;height:3.6em;border-radius:50%;overflow:hidden;border:2px solid rgba(246,130,19,0.4);">
+                          <img src="https://dihadi.co.in/team/Himanshu_COO.svg" alt="Himanshu Harshit" width="58"
+                            height="58" style="width:3.625em;height:3.625em;display:block;border-radius:50%;">
+                        </div>
+                        <div class="team-name txt-white"
+                          style="color:#ffffff;font-weight:600;font-size:0.78em;margin-top:0.55em;">Himanshu</div>
+                        <div class="txt-orange" style="color:#F68213;font-size:0.65em;font-weight:600;">COO</div>
+                        <div class="txt-faint" style="color:#555555;font-size:0.6em;margin-top:0.1em;">BITS Goa</div>
+                      </td>
+                      <!-- Swasti CEO (centre, highlighted) -->
+                      <td class="team-cell" style="width:34%;text-align:center;padding:0 0.4em;">
+                        <div
+                          style="display:inline-block;width:3.6em;height:3.6em;border-radius:50%;overflow:hidden;border:2px solid #F68213;box-shadow:0 0 0 3px rgba(246,130,19,0.15);">
+                          <img src="https://dihadi.co.in/team/Swasti_CEO.svg" alt="Swasti Dubey" width="58" height="58"
+                            style="width:3.625em;height:3.625em;display:block;border-radius:50%;">
+                        </div>
+                        <div class="team-name txt-white"
+                          style="color:#ffffff;font-weight:700;font-size:0.78em;margin-top:0.55em;">Swasti</div>
+                        <div class="txt-orange" style="color:#F68213;font-size:0.65em;font-weight:600;">CEO</div>
+                        <div class="txt-faint" style="color:#555555;font-size:0.6em;margin-top:0.1em;">BITS Goa</div>
+                      </td>
+                      <!-- Srijan CTO -->
+                      <td class="team-cell" style="width:33%;text-align:center;padding:0 0.4em;">
+                        <div
+                          style="display:inline-block;width:3.6em;height:3.6em;border-radius:50%;overflow:hidden;border:2px solid rgba(246,130,19,0.4);">
+                          <img src="https://dihadi.co.in/team/Srijan_CTO.svg" alt="Srijan Sahay" width="58" height="58"
+                            style="width:3.625em;height:3.625em;display:block;border-radius:50%;">
+                        </div>
+                        <div class="team-name txt-white"
+                          style="color:#ffffff;font-weight:600;font-size:0.78em;margin-top:0.55em;">Srijan</div>
+                        <div class="txt-orange" style="color:#F68213;font-size:0.65em;font-weight:600;">CTO</div>
+                        <div class="txt-faint" style="color:#555555;font-size:0.6em;margin-top:0.1em;">BITS Pilani</div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Quote -->
+                  <p class="txt-muted"
+                    style="color:#9ca3af;font-size:0.78em;margin:1.3em 0 0;line-height:1.6;font-style:italic;">
+                    "We're BITSians building for 400 million workers. Come build with your own."
+                  </p>
+
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════
+               CTA — Apply now
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-cta"
+                  style="background-color:#140d00;padding:2.2em 1.5em;text-align:center;background-image:linear-gradient(150deg,#1a0c00 0%,#111111 50%,#1a0c00 100%);border-top:1px solid rgba(246,130,19,0.2);">
+
+                  <h2 class="txt-white"
+                    style="color:#ffffff;font-size:1.25em;font-weight:800;margin:0 0 0.35em;letter-spacing:-0.02em;">
+                    Ready to build something real?</h2>
+                  <p class="txt-muted" style="color:#9ca3af;font-size:0.85em;margin:0 0 1.5em;">Applications are
+                    rolling. <strong class="txt-white" style="color:#ffffff;">Don't wait.</strong></p>
+
+                  <!-- CTA button (table for Outlook compat) -->
+                  <table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
+                    <tr>
+                      <td style="background-color:#F68213;border-radius:2em;padding:0.8em 2.2em;">
+                        <a href="[INSERT_GOOGLE_FORM_LINK]"
+                          style="color:#111111;font-weight:800;font-size:0.95em;text-decoration:none;letter-spacing:0.03em;white-space:nowrap;">
+                          Apply Now &nbsp;→
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p class="txt-faint" style="color:#555555;font-size:0.72em;margin:1.1em 0 0;">
+                    or just reply to this email — happy to answer questions
+                  </p>
+                </td>
+              </tr>
+
+              <!-- ════════════════════════════════════
+               FOOTER
+          ════════════════════════════════════ -->
+              <tr>
+                <td class="bg-footer"
+                  style="background-color:#0a0a0a;border-radius:0 0 1em 1em;padding:1.5em;border-top:1px solid #1e1e1e;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="vertical-align:middle;">
+                        <img src="https://dihadi.co.in/brand/dihadi_logo.svg" alt="Dihadi" height="20"
+                          style="height:1.25em;width:auto;display:block;">
+                      </td>
+                      <td style="text-align:right;vertical-align:middle;">
+                        <a href="https://dihadi.co.in" class="txt-orange"
+                          style="color:#F68213;font-size:0.7em;text-decoration:none;">dihadi.co.in</a>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p class="txt-faint" style="color:#4a4a4a;font-size:0.68em;margin:1em 0 0.3em;line-height:1.7;">
+                    The Dihadi Team — Himanshu Harshit &nbsp;·&nbsp; Swasti Dubey &nbsp;·&nbsp; Srijan Sahay<br>
+                    Incubated at FIED, IIM Kashipur &nbsp;|&nbsp;
+                    <a href="mailto:founders@dihadi.co.in" class="txt-orange"
+                      style="color:#F68213;text-decoration:none;">founders@dihadi.co.in</a>
+                  </p>
+
+                  <p style="color:#333333;font-size:0.62em;margin:0.8em 0 0;line-height:1.5;">
+                    You're receiving this because you're a BITSian. We respect your inbox.
+                  </p>
+                </td>
+              </tr>
+
+            </table>
+            <!-- End email container -->
+
+          </td>
+        </tr>
+      </table>
+      <!-- End page wrapper -->
+
+    </div><!-- .gmail-blend-difference -->
+  </div><!-- .gmail-blend-screen -->
+
+</body>
+
+</html>

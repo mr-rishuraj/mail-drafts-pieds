@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Join Dihadi | Build for Bharat</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      color-scheme: light dark;
+      --gold:        #F68213;
+      --gold-mid:    #FF9533;
+      --gold-light:  #FFF3E5;
+      --gold-dark:   #BF6010;
+      --dark:        #111111;
+      --dark-2:      #1C1C1C;
+      --dark-3:      #252525;
+      --cream:       #FAFAF8;
+      --muted:       #6B6B6B;
+      --white:       #FFFFFF;
+      --gold-grad:   linear-gradient(135deg, #F68213 0%, #FF9F45 55%, #FFBE80 100%);
+      --amber-bg:    #FFF4E8;
+      --amber-mid:   #7C3A00;
+      --team-bg:     #F3F0EB;
+      --gold-glow:   rgba(246,130,19,0.18);
+    }
+
+    /* ===== DARK MODE OVERRIDES ===== */
+    @media (prefers-color-scheme: dark) {
+      body, .ew {
+        background: #121212 !important;
+        color: #E0E0E0 !important;
+      }
+      .ew { background: #1A1A1A !important; border: 1px solid #333 !important; }
+      .hd-hl { color: #FFFFFF !important; }
+      .hd-hl em { color: #CCCCCC !important; }
+      .plogos, .ft { background: #1A1A1A !important; border-color: #333 !important; }
+      .plogos-lbl { color: #888 !important; }
+      .plogos img { filter: invert(1) brightness(0.9) !important; opacity: 0.8 !important; }
+      
+      .sc, .why, .ti { 
+        background: #241D15 !important; 
+        border-color: rgba(246,130,19,0.3) !important; 
+        color: #E0E0E0 !important;
+      }
+      .why-h, .sn { color: #FF9533 !important; }
+      .sl, .ib { color: #AAAAAA !important; }
+      .ib strong, .td strong { color: #FFFFFF !important; }
+      .pill { background: #332211 !important; color: #FF9533 !important; border-color: #8C4D0A !important; }
+      
+      .rc, .mc { 
+        background: #222222 !important; 
+        border-color: #444 !important; 
+      }
+      .rc:nth-child(1) { border-left-color: #F68213 !important; }
+      .rc:nth-child(2) { border-left-color: #888 !important; }
+      .rc:nth-child(3) { border-left-color: #AAA !important; }
+      .rt { color: #FFFFFF !important; }
+      .rd { color: #BBBBBB !important; }
+      .rtg { background: #333 !important; color: #DDD !important; }
+      
+      .mn { color: #FFFFFF !important; }
+      .mo { color: #FF9533 !important; }
+      
+      .sl2 span { color: #888 !important; }
+      .sl2::before, .sl2::after { background: #444 !important; }
+      
+      .ti { background: #222 !important; border-color: #444 !important; }
+      .td { color: #BBBBBB !important; }
+      .tnp { background: #332211 !important; color: #EEEEEE !important; border-color: #8C4D0A !important; }
+      .tnp span { color: #FF9533 !important; }
+      
+      .wtt { color: #FFFFFF !important; }
+      .wts { color: #BBBBBB !important; }
+      
+      .cta { box-shadow: 0 6px 28px rgba(246,130,19,0.15) !important; }
+      .cta-btn { background: #1A1A1A !important; color: #FFFFFF !important; border: 1px solid #333 !important;}
+      
+      .ft-c { color: #888 !important; }
+      .hd-wave path { fill: #1A1A1A !important; }
+      img.logo-svg { filter: invert(0) !important; mix-blend-mode: normal !important; }
+      .ft-logo img { filter: invert(1) brightness(0.9) !important; }
+    }
+
+    /* OGSC data attribute overrides for specific clients like Outlook */
+    [data-ogsc] body, [data-ogsc] .ew { background: #121212 !important; color: #E0E0E0 !important; }
+    [data-ogsc] .ew { background: #1A1A1A !important; border: 1px solid #333 !important; }
+    [data-ogsc] .hd-hl { color: #FFFFFF !important; }
+    [data-ogsc] .hd-hl em { color: #CCCCCC !important; }
+    [data-ogsc] .plogos, [data-ogsc] .ft { background: #1A1A1A !important; border-color: #333 !important; }
+    [data-ogsc] .plogos-lbl { color: #888 !important; }
+    [data-ogsc] .sc, [data-ogsc] .why, [data-ogsc] .ti { background: #241D15 !important; border-color: rgba(246,130,19,0.3) !important; color: #E0E0E0 !important; }
+    [data-ogsc] .why-h, [data-ogsc] .sn { color: #FF9533 !important; }
+    [data-ogsc] .sl, [data-ogsc] .ib, [data-ogsc] .rd, [data-ogsc] .td, [data-ogsc] .wts { color: #AAAAAA !important; }
+    [data-ogsc] .ib strong, [data-ogsc] .td strong, [data-ogsc] .rt, [data-ogsc] .mn, [data-ogsc] .wtt { color: #FFFFFF !important; }
+    [data-ogsc] .rc, [data-ogsc] .mc { background: #222222 !important; border-color: #444 !important; }
+    [data-ogsc] .pill, [data-ogsc] .tnp { background: #332211 !important; color: #FF9533 !important; border-color: #8C4D0A !important; }
+    [data-ogsc] .sl2 span { color: #888 !important; }
+    [data-ogsc] .sl2::before, [data-ogsc] .sl2::after { background: #444 !important; }
+    [data-ogsc] .rtg { background: #333 !important; color: #DDD !important; }
+    [data-ogsc] .mo { color: #FF9533 !important; }
+    [data-ogsc] .cta-btn { background: #1A1A1A !important; color: #FFFFFF !important; border: 1px solid #333 !important;}
+    [data-ogsc] .ft-c { color: #888 !important; }
+    [data-ogsc] .hd-wave path { fill: #1A1A1A !important; }
+
+    /* ===== GMAIL SPECIFIC DARK MODE FIXES ===== */
+    /* Gmail completely ignores @media (prefers-color-scheme: dark) but applies its own violent inversion. 
+       We must use the 'u + .body' hack and specific blend modes to fight it. */
+    u + .body .ew { background-color: #1A1A1A !important; }
+    u + .body .hd-hl { color: #FFFFFF !important; }
+    u + .body .hd-hl em { color: #CCCCCC !important; }
+    u + .body .plogos, u + .body .ft { background-color: #1A1A1A !important; }
+    u + .body .sc, u + .body .why, u + .body .ti { background-color: #241D15 !important; }
+    u + .body .rc, u + .body .mc { background-color: #222222 !important; }
+    /* Force colors to stay orange/gold by using text-shadow / linear-gradient overrides */
+    u + .body .why-h, u + .body .sn { color: #FF9533 !important; }
+    /* Blend mode tricks to protect text from inversion */
+    u + .body .rt, u + .body .mn, u + .body .wtt, u + .body .ib strong, u + .body .td strong { color: #FFF !important; mix-blend-mode: screen !important; }
+    u + .body .sl, u + .body .ib, u + .body .rd, u + .body .td, u + .body .wts { color: #AAA !important; mix-blend-mode: screen !important; }
+    u + .body .pill, u + .body .tnp { background-color: #332211 !important; color: #FF9533 !important; border-color: #8C4D0A !important; }
+
+    body {
+      background: #E8E5DF;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      color: var(--dark);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ===== WRAPPER ===== */
+    .ew {
+      max-width: 42em;
+      margin: 0 auto;
+      background: var(--cream);
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: none;
+    }
+
+    /* ===== HEADER ===== */
+    .hd {
+      background: var(--gold-grad);
+      padding: 1.6em 1.4em 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative circles */
+    .hbg1, .hbg2, .hbg3, .hbg4 {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hbg1 { top: -5em; right: -5em; width: 18em; height: 18em; background: rgba(255,255,255,0.10); }
+    .hbg2 { bottom:  0.5em; right: 3em; width: 6em;  height: 6em;  background: rgba(0,0,0,0.06); }
+    .hbg3 { top: 1em; left: -4em; width: 10em; height: 10em; background: rgba(0,0,0,0.04); }
+    .hbg4 { bottom: 2em; left: 50%; width: 4em; height: 4em; background: rgba(255,255,255,0.08); transform: translateX(-50%); }
+
+    /* Logo row */
+    .logo-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.7em;
+      margin-bottom: 1.2em;
+      position: relative;
+      z-index: 1;
+    }
+    .logo-svg {
+      max-height: 2.8em;
+      width: auto;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+      filter: none;
+    }
+
+    /* Badges */
+    .badge-row {
+      display: flex;
+      gap: 0.4em;
+      flex-wrap: wrap;
+      margin-bottom: 1em;
+      position: relative;
+      z-index: 1;
+    }
+    .badge {
+      background: rgba(0,0,0,0.82);
+      color: #FFFFFF;
+      font-size: 0.52em;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4em 0.85em;
+      border-radius: 2em;
+      border: 1px solid rgba(0,0,0,0.0);
+    }
+    .badge.ol {
+      background: transparent;
+      color: rgba(0,0,0,0.7);
+      border: 1.5px solid rgba(0,0,0,0.35);
+    }
+
+    /* Hero area */
+    .hd-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 0.8em;
+      position: relative;
+      z-index: 1;
+    }
+    .hd-hl {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.2em;
+      line-height: 0.88;
+      color: var(--dark);
+      letter-spacing: 0.015em;
+    }
+    .hd-hl em {
+      font-style: italic;
+      font-family: 'DM Serif Display', serif;
+      color: rgba(10,10,10,0.75);
+    }
+    .hd-ill { display: none; }
+
+    /* Wave */
+    .hd-wave { margin-top: -0.04em; line-height: 0; position: relative; z-index: 1; }
+    .hd-wave svg { width: 100%; display: block; }
+
+    /* ===== FUNDED BANNER ===== */
+    .fb {
+      background: #7C3A00;
+      margin: 0 1.2em;
+      border-radius: 0 0 1em 1em;
+      padding: 0.85em 1.1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      flex-direction: column;
+      text-align: center;
+      flex-wrap: wrap;
+      border: 1px solid rgba(255,180,80,0.18);
+      border-top: none;
+      box-shadow: 0 4px 18px rgba(124,58,0,0.3);
+    }
+    .fb-lbl {
+      font-size: 0.56em;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,200,120,0.65);
+      white-space: nowrap;
+    }
+    .fb-amt {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6em;
+      color: #FFD08A;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .fb-amt span {
+      font-size: 0.48em;
+      color: rgba(255,200,140,0.7);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 0.3em;
+    }
+    .fb-dot { width: 0.28em; height: 0.28em; background: rgba(255,200,120,0.3); border-radius: 50%; display: none; }
+    .fb-src {
+      display: flex;
+      align-items: center;
+      gap: 0.45em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .fb-pill {
+      background: rgba(255,180,80,0.14);
+      border: 1px solid rgba(255,180,80,0.3);
+      color: #FFD08A;
+      font-size: 0.54em;
+      font-weight: 600;
+      padding: 0.3em 0.65em;
+      border-radius: 0.35em;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    /* ===== PARTNER LOGOS ===== */
+    .plogos {
+      padding: 0.85em 1.4em;
+      border-bottom: 1px solid rgba(0,0,0,0.065);
+      text-align: center;
+      background: var(--cream);
+    }
+    .plogos-lbl {
+      font-size: 0.52em;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.26);
+      margin-bottom: 0.9em;
+    }
+    .plogos-imgs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.6em;
+      flex-wrap: wrap;
+    }
+    .plogos img {
+      max-height: 2.8em;
+      width: auto;
+      opacity: 1;
+      filter: none;
+    }
+    @media (max-width: 36em) {
+      .plogos-imgs { gap: 1.1em; }
+      .plogos img { max-height: 2.1em; }
+    }
+
+    /* ===== INTRO ===== */
+    .intro { padding: 1.6em 1.4em 1.1em; }
+
+    .ss {
+      display: flex;
+      gap: 0.6em;
+      margin-bottom: 1.4em;
+      flex-direction: column;
+    }
+    .sc {
+      background: #FFF4E8;
+      color: var(--dark);
+      border-radius: 0.9em;
+      padding: 0.9em 1.1em;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(246,130,19,0.18);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .sn {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2em;
+      color: var(--gold-dark);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+    .sl {
+      font-size: 0.64em;
+      color: #7C4A10;
+      margin-top: 0.2em;
+      line-height: 1.3;
+    }
+    .ib {
+      font-size: 0.88em;
+      line-height: 1.75;
+      color: #2C2C2C;
+      margin-bottom: 1.1em;
+    }
+    .ib strong { color: var(--dark); font-weight: 700; }
+    .ps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4em;
+    }
+    .pill {
+      background: var(--gold-light);
+      border: 1px solid rgba(246,130,19,0.4);
+      color: var(--gold-dark);
+      font-size: 0.64em;
+      font-weight: 600;
+      padding: 0.32em 0.75em;
+      border-radius: 2em;
+    }
+
+    /* ===== SECTION DIVIDER ===== */
+    .sl2 {
+      display: flex;
+      align-items: center;
+      gap: 0.65em;
+      padding: 0 1.4em;
+      margin: 1.4em 0 0.9em;
+    }
+    .sl2 span {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.88em;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .sl2::before, .sl2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(0,0,0,0.1);
+    }
+
+    /* ===== ROLES ===== */
+    .roles { padding: 0 1.4em; }
+    .rc {
+      display: flex;
+      gap: 0.9em;
+      margin-bottom: 0.75em;
+      background: var(--white);
+      border-radius: 0.9em;
+      padding: 1em 1.1em;
+      border-left: 3px solid var(--gold);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      overflow: hidden;
+      position: relative;
+    }
+    .rc::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, var(--gold-glow), transparent 60%);
+    }
+    .rc:nth-child(2) { border-left-color: #3A3A3A; }
+    .rc:nth-child(3) { border-left-color: #555; }
+    .ri {
+      width: 2.8em; height: 2.8em;
+      border-radius: 0.7em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      flex-shrink: 0;
+    }
+    .rc:nth-child(1) .ri { background: linear-gradient(135deg, #FFF0DC, #FFE5C0); }
+    .rc:nth-child(2) .ri { background: linear-gradient(135deg, #ECECEC, #E0E0E0); }
+    .rc:nth-child(3) .ri { background: linear-gradient(135deg, #E8E8E8, #DCDCDC); }
+    .rin { flex: 1; min-width: 0; }
+    .rt {
+      font-weight: 700;
+      font-size: 0.86em;
+      color: var(--dark);
+      margin-bottom: 0.2em;
+      letter-spacing: -0.01em;
+    }
+    .rd {
+      font-size: 0.71em;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 0.38em;
+    }
+    .rtgs { display: flex; gap: 0.3em; flex-wrap: wrap; }
+    .rtg {
+      font-size: 0.57em;
+      font-weight: 600;
+      padding: 0.22em 0.52em;
+      border-radius: 0.35em;
+      background: rgba(0,0,0,0.05);
+      color: #444;
+      letter-spacing: 0.03em;
+    }
+
+    /* ===== WHY ===== */
+    .why {
+      margin: 1.4em 1.4em;
+      background: #FFF4E8;
+      border-radius: 1.1em;
+      padding: 1.6em 1.4em;
+      color: var(--dark);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(246,130,19,0.18);
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .why-h {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5em;
+      letter-spacing: 0.05em;
+      color: var(--gold-dark);
+      margin-bottom: 1em;
+    }
+    .why-g { display: flex; flex-direction: column; gap: 0.85em; }
+    .wi { display: flex; align-items: flex-start; gap: 0.75em; }
+    .wn {
+      width: 1.75em; height: 1.75em;
+      background: var(--gold);
+      color: #FFFFFF;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.95em;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .wt { flex: 1; }
+    .wtt { font-weight: 700; font-size: 0.83em; margin-bottom: 0.12em; color: #1A1A1A; }
+    .wts { font-size: 0.7em; color: #6B4A1A; line-height: 1.5; }
+
+    /* ===== MENTORS ===== */
+    .mentors { padding: 0 1.4em 0.6em; }
+    .mr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55em;
+    }
+    .mc {
+      background: var(--white);
+      border-radius: 0.7em;
+      padding: 0.8em 0.9em;
+      border: 1px solid rgba(0,0,0,0.076);
+      border-top: 2.5px solid var(--gold);
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    .mn {
+      font-size: 0.73em;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--dark);
+      letter-spacing: -0.01em;
+      word-break: break-word;
+    }
+    .mo {
+      font-size: 0.58em;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-top: 0.12em;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+
+    /* ===== TEAM ===== */
+    .team { padding: 0 1.4em 1.1em; }
+    .ti {
+      background: #F3F0EB;
+      border-radius: 1em;
+      padding: 1.1em 1.3em;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    }
+    .tnr {
+      display: flex;
+      gap: 0.4em;
+      flex-wrap: wrap;
+      margin-bottom: 0.7em;
+    }
+    .tnp {
+      background: #FFF4E8;
+      color: var(--dark);
+      font-size: 0.65em;
+      font-weight: 700;
+      padding: 0.34em 0.75em;
+      border-radius: 2em;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(246,130,19,0.3);
+    }
+    .tnp span {
+      color: #7C4A10;
+      font-weight: 400;
+      margin-left: 0.25em;
+      font-size: 0.9em;
+    }
+    .td { font-size: 0.73em; color: #3A3028; line-height: 1.6; }
+    .td strong { color: var(--gold-dark); font-weight: 700; }
+
+    /* ===== CTA ===== */
+    .cta {
+      background: var(--gold-grad);
+      margin: 0 1.4em 1.6em;
+      border-radius: 1.1em;
+      padding: 1.7em 1.4em;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 28px rgba(246,130,19,0.32);
+    }
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -2.5em; left: -2.5em;
+      width: 9em; height: 9em;
+      background: rgba(255,255,255,0.13);
+      border-radius: 50%;
+    }
+    .cta::after {
+      content: '';
+      position: absolute;
+      bottom: -3.5em; right: -2.5em;
+      width: 11em; height: 11em;
+      background: rgba(0,0,0,0.07);
+      border-radius: 50%;
+    }
+    .cta-h {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2em;
+      letter-spacing: 0.03em;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 0.22em;
+      position: relative; z-index: 1;
+    }
+    .cta-s {
+      font-size: 0.74em;
+      color: rgba(0,0,0,0.58);
+      margin-bottom: 1.1em;
+      position: relative; z-index: 1;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--dark);
+      color: var(--white);
+      border: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.18em;
+      letter-spacing: 0.12em;
+      padding: 0.65em 2.5em;
+      border-radius: 999px;
+      text-decoration: none;
+      position: relative; z-index: 1;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+    }
+    .cta-n {
+      font-size: 0.61em;
+      color: rgba(0,0,0,0.45);
+      margin-top: 0.85em;
+      position: relative; z-index: 1;
+    }
+
+    /* ===== FOOTER ===== */
+    .ft {
+      padding: 1.2em 1.4em;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.6em;
+      background: var(--cream);
+    }
+    .ft-logo { display: flex; align-items: center; justify-content: center; margin-bottom: 0.5em; }
+    .ft-logo img { 
+      max-height: 2.8em; 
+      width: auto; 
+      opacity: 1;
+      filter: none;
+    }
+    .ft-c {
+      font-size: 0.64em;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.75;
+    }
+    .ft-c a {
+      color: var(--gold-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ===== DESKTOP / TABLET ===== */
+    @media (min-width: 36em) {
+      .ew {
+        margin: 2em auto;
+        border-radius: 0.9em;
+        box-shadow: 0 2em 6em rgba(0,0,0,0.22);
+      }
+      .hd { padding: 2em 2.6em 0; }
+      .hbg1 { width: 22em; height: 22em; }
+      .hbg2 { right: 8em; width: 7em; height: 7em; }
+      .hbg3 { width: 12em; height: 12em; }
+      .logo-svg { max-height: 2.8em; }
+      .badge { font-size: 0.58em; }
+      .hd-hl { font-size: 4.5em; }
+      .hd-ill {
+        display: block;
+        flex-shrink: 0;
+        width: 9em;
+        margin-bottom: 0.4em;
+      }
+      .fb {
+        margin: 0 2.6em;
+        padding: 0.95em 1.6em;
+        flex-direction: row;
+        gap: 0.9em;
+        text-align: left;
+      }
+      .fb-dot { display: block; }
+      .fb-amt { font-size: 1.8em; }
+      .fb-pill { font-size: 0.58em; }
+      .plogos { padding: 1em 2.6em; }
+      .intro { padding: 2em 2.6em 1.3em; }
+      .ss { flex-direction: row; gap: 0.85em; }
+      .sc { flex: 1; min-width: 7em; padding: 1.1em 1.3em; }
+      .sn { font-size: 2.3em; }
+      .sl { font-size: 0.67em; }
+      .ib { font-size: 0.93em; }
+      .pill { font-size: 0.69em; }
+      .sl2 { padding: 0 2.6em; margin: 1.5em 0 1em; }
+      .sl2 span { font-size: 1em; }
+      .roles { padding: 0 2.6em; }
+      .rc { gap: 1.2em; padding: 1.15em 1.4em; }
+      .ri { width: 3.1em; height: 3.1em; font-size: 1.4em; }
+      .rt { font-size: 0.93em; }
+      .rd { font-size: 0.76em; }
+      .rtg { font-size: 0.61em; }
+      .why {
+        margin: 1.5em 2.6em;
+        padding: 2em;
+      }
+      .why::before { font-size: 10em; }
+      .why-h { font-size: 1.75em; }
+      .wn { width: 1.9em; height: 1.9em; font-size: 1.05em; }
+      .wtt { font-size: 0.87em; }
+      .wts { font-size: 0.74em; }
+      .mentors { padding: 0 2.6em 0.6em; }
+      .mr {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 0.7em;
+      }
+      .mc { padding: 0.95em 1.15em; }
+      .mn { font-size: 0.78em; }
+      .mo { font-size: 0.62em; }
+      .team { padding: 0 2.6em 1.3em; }
+      .ti { padding: 1.3em 1.5em; }
+      .tnp { font-size: 0.72em; }
+      .td { font-size: 0.76em; }
+      .cta {
+        margin: 0 2.6em 2.2em;
+        padding: 2.2em;
+      }
+      .cta-h { font-size: 2.5em; }
+      .cta-s { font-size: 0.8em; }
+      .cta-btn { font-size: 1.28em; padding: 0.68em 3em; }
+      .ft {
+        padding: 1.5em 2.6em;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+      .ft-c { text-align: right; font-size: 0.69em; }
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="ew">
+
+    <!-- HEADER -->
+    <div class="hd">
+      <div class="hbg1"></div>
+      <div class="hbg2"></div>
+      <div class="hbg3"></div>
+      <div class="hbg4"></div>
+
+      <div class="logo-bar">
+        <img src="https://dihadi.co.in/brand/dihadi_logo.svg" alt="Dihadi" class="logo-svg">
+      </div>
+
+      <div class="badge-row">
+        <span class="badge" style="background:rgba(0,0,0,0.80);color:#FFFFFF;">₹11L+ Funded</span>
+        <span class="badge" style="background:rgba(0,0,0,0.80);color:#FFFFFF;">Accel YMF</span>
+        <span class="badge" style="background:rgba(0,0,0,0.80);color:#FFFFFF;">IIM Kashipur</span>
+        <span class="badge ol">BITS Pilani Founded</span>
+      </div>
+
+      <div class="hd-inner">
+        <div class="hd-hl">Build for<br><em>Bharat.</em></div>
+        <div class="hd-ill">
+          <svg viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
+            <rect x="48" y="8" width="46" height="84" rx="7" fill="#1A1A1A" />
+            <rect x="52" y="16" width="38" height="62" rx="3" fill="#252525" />
+            <rect x="56" y="21" width="30" height="3.5" rx="1.75" fill="#F68213" opacity="0.95" />
+            <rect x="56" y="29" width="22" height="2.5" rx="1.25" fill="white" opacity="0.3" />
+            <rect x="56" y="35" width="26" height="2.5" rx="1.25" fill="white" opacity="0.2" />
+            <circle cx="71" cy="55" r="8" fill="#F68213" opacity="0.18" />
+            <path d="M67 55 L70 58 L76 51" stroke="#F68213" stroke-width="2" fill="none" stroke-linecap="round" />
+            <rect x="64" y="84" width="14" height="2" rx="1" fill="rgba(255,255,255,0.2)" />
+            <circle cx="22" cy="34" r="8" fill="#2A1800" />
+            <circle cx="22" cy="28" r="4.5" fill="#F68213" opacity="0.85" />
+            <path d="M16 42 Q22 37 28 42" stroke="#F68213" stroke-width="1.8" fill="none" opacity="0.8" />
+            <circle cx="120" cy="56" r="8" fill="#2A1800" />
+            <circle cx="120" cy="50" r="4.5" fill="#F68213" opacity="0.85" />
+            <path d="M114 64 Q120 59 126 64" stroke="#F68213" stroke-width="1.8" fill="none" opacity="0.8" />
+            <line x1="30" y1="37" x2="50" y2="48" stroke="#F68213" stroke-width="1.2" stroke-dasharray="3,2.5"
+              opacity="0.55" />
+            <line x1="94" y1="54" x2="113" y2="55" stroke="#F68213" stroke-width="1.2" stroke-dasharray="3,2.5"
+              opacity="0.55" />
+            <circle cx="71" cy="100" r="3.5" fill="#F68213" opacity="0.9" />
+            <line x1="71" y1="96" x2="71" y2="88" stroke="#F68213" stroke-width="1.5" opacity="0.7" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="hd-wave">
+        <svg viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,22 C80,36 160,6 280,22 C380,36 500,8 600,20 L600,40 L0,40 Z" fill="#FAFAF8" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- FUNDED HIGHLIGHT BANNER -->
+    <div class="fb">
+      <div class="fb-lbl">Startup Funded</div>
+      <div class="fb-amt">₹11 Lakhs+ <span>raised</span></div>
+      <div class="fb-dot"></div>
+      <div class="fb-src">
+        <span class="fb-pill">Genesis EIR · ₹10L</span>
+        <span class="fb-pill">YMF Fellowship</span>
+        <span class="fb-pill">IIM-K Incubated</span>
+      </div>
+    </div>
+
+    <!-- PARTNER LOGOS -->
+    <div class="plogos">
+      <div class="plogos-lbl">Institutional Support</div>
+      <div class="plogos-imgs">
+        <img src="https://www.dihadi.co.in/brand/BITS.svg" alt="BITS Pilani">
+        <img src="https://www.dihadi.co.in/brand/IIMKashipur.svg" alt="IIM Kashipur">
+        <img src="https://www.dihadi.co.in/brand/MEITY.svg" alt="MeitY">
+        <img src="https://www.dihadi.co.in/brand/FIED.svg" alt="FIED">
+        <img src="https://www.dihadi.co.in/brand/YMP.svg" alt="YMP">
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <div class="intro">
+      <div class="ss">
+        <div class="sc">
+          <div class="sn">400+</div>
+          <div class="sl">Workers Surveyed</div>
+        </div>
+        <div class="sc">
+          <div class="sn">20+</div>
+          <div class="sl">Contractors Engaged</div>
+        </div>
+        <div class="sc">
+          <div class="sn">₹11L</div>
+          <div class="sl">Grants Raised</div>
+        </div>
+      </div>
+
+      <div class="ib">
+        Hey, it's Himanshu, Swasti, and Srijan.<br><br>
+        We built <strong>Dihadi</strong> because India's 500M-strong informal workforce kept losing daily earnings to broken systems — no recourse, no record, no certainty.<br><br>
+        We surveyed workers, mapped contractor workflows, shipped an MVP, and raised early funding — <strong>all while still at BITS Pilani.</strong> Now at IIM Kashipur's incubator, we're expanding the team.
+      </div>
+
+      <div class="ps">
+        <span class="pill">🇮🇳 Made in Bharat</span>
+        <span class="pill">💸 Backed by Accel YMF</span>
+        <span class="pill">🏛️ IIM-K Incubated</span>
+        <span class="pill">⚙️ Early-stage · High Impact</span>
+      </div>
+    </div>
+
+    <!-- ROLES -->
+    <div class="sl2"><span>Open Roles</span></div>
+    <div class="roles">
+
+      <div class="rc">
+        <div class="ri">🛠️</div>
+        <div class="rin">
+          <div class="rt">Full-Stack Engineer</div>
+          <div class="rd">Own product features end-to-end. React Native + Django.</div>
+          <div class="rtgs">
+            <span class="rtg">Remote-first</span>
+            <span class="rtg">Equity-eligible</span>
+            <span class="rtg">Founding team</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rc">
+        <div class="ri">📊</div>
+        <div class="rin">
+          <div class="rt">Growth & Ops Associate</div>
+          <div class="rd">Drive contractor onboarding and revenue in target cities.</div>
+          <div class="rtgs">
+            <span class="rtg">Field + Remote</span>
+            <span class="rtg">Hindi/English</span>
+            <span class="rtg">High ownership</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rc">
+        <div class="ri">🎨</div>
+        <div class="rin">
+          <div class="rt">Product Designer</div>
+          <div class="rd">Design for Bharat-first users. Accessibility above all.</div>
+          <div class="rtgs">
+            <span class="rtg">Remote</span>
+            <span class="rtg">Figma</span>
+            <span class="rtg">Bharat-UX</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WHY -->
+    <div class="why">
+      <div class="why-h">Why Dihadi?</div>
+      <div class="why-g">
+        <div class="wi">
+          <div class="wn">1</div>
+          <div class="wt">
+            <div class="wtt">Real problem, real urgency</div>
+            <div class="wts">500M informal workers. Billions in lost wages every year. This is not a toy market.</div>
+          </div>
+        </div>
+        <div class="wi">
+          <div class="wn">2</div>
+          <div class="wt">
+            <div class="wtt">Proven early traction</div>
+            <div class="wts">₹11L+ raised, IIM-K incubated, and growing — before most startups have a deck.</div>
+          </div>
+        </div>
+        <div class="wi">
+          <div class="wn">3</div>
+          <div class="wt">
+            <div class="wtt">Founders who've done the work</div>
+            <div class="wts">400+ user interviews, 20+ contractor studies. We build from evidence, not assumptions.</div>
+          </div>
+        </div>
+        <div class="wi">
+          <div class="wn">4</div>
+          <div class="wt">
+            <div class="wtt">Founder-level ownership</div>
+            <div class="wts">Small team. Big scope. Your decisions will move the product and the mission.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENTORS -->
+    <div class="sl2"><span>Advisors & Mentors</span></div>
+    <div class="mentors">
+      <div class="mr">
+        <div class="mc">
+          <div class="mn">Gaurav Munjal</div>
+          <div class="mo">Founder, Unacademy</div>
+        </div>
+        <div class="mc">
+          <div class="mn">Siddharth Pai</div>
+          <div class="mo">Partner, 3one4 Capital</div>
+        </div>
+        <div class="mc">
+          <div class="mn">Ritesh Agarwal</div>
+          <div class="mo">Founder, OYO Rooms</div>
+        </div>
+        <div class="mc">
+          <div class="mn">Deepak Gupta</div>
+          <div class="mo">ex-Google, Advisor</div>
+        </div>
+        <div class="mc">
+          <div class="mn">Anand Chandrasekharan</div>
+          <div class="mo">ex-Facebook · Advisor</div>
+        </div>
+        <div class="mc">
+          <div class="mn">Anisha Singh</div>
+          <div class="mo">Founder, mydala</div>
+        </div>
+        <div class="mc">
+          <div class="mn">Pravin Jadhav</div>
+          <div class="mo">Founder, Raise Financial</div>
+        </div>
+        <div class="mc">
+          <div class="mn">Vikram Vora</div>
+          <div class="mo">IIM-K · Incubation Head</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM -->
+    <div class="sl2"><span>The Founding Team</span></div>
+    <div class="team">
+      <div class="ti">
+        <div class="tnr">
+          <span class="tnp">Swasti Dubey <span>CEO · MSc Econ</span></span>
+          <span class="tnp">Himanshu Harshit <span>COO · BE Civil</span></span>
+          <span class="tnp">Srijan Sahay <span>CTO · MSc Chem + BE Mech</span></span>
+        </div>
+        <div class="td">
+          Three BITSians who got tired of watching India's informal workers lose daily income to a broken system. They
+          surveyed <strong>400+ workers</strong>, engaged <strong>20+ contractors</strong>, built an MVP, raised
+          <strong>₹11L+ in grants</strong>, and got incubated at IIM Kashipur — all while still at BITS. Now they're
+          hiring the next batch.
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA IMAGE -->
+    <div class="cta-img-wrap" style="text-align: center; margin: 0 1.4em 1.6em;">
+      <a href="https://forms.gle/if59iJKkiHN9sHMh9" style="display: block; text-decoration: none;">
+        <img src="cta_image.png" alt="Ready to Build Bharat? Apply Now" style="width: 100%; max-width: 600px; height: auto; border-radius: 1.1em; display: block; margin: 0 auto; box-shadow: 0 6px 28px rgba(246,130,19,0.32);">
+      </a>
+      <div class="cta-n">Questions? Just reply to this thread — we read every one. 💬</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="ft">
+      <div class="ft-logo">
+        <img src="https://dihadi.co.in/brand/dihadi_logo.svg" alt="Dihadi">
+      </div>
+      <div class="ft-c">
+        <div>Himanshu · Swasti · Srijan</div>
+        <div><a href="mailto:team@dihadi.co.in">founders@dihadi.co.in</a></div>
+        <div>Built with intent at BITS Pilani</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

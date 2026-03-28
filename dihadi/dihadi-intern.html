@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!--<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no"/>
+<meta name="x-apple-disable-message-reformatting"/>
+<!-- ── Forced dark mode on all non-iOS-Gmail clients ── -->
+<meta name="color-scheme" content="dark"/>
+<meta name="supported-color-schemes" content="dark"/>
+<title>Dihadi Internship Drive — Build for Bharat</title>
+
+<!--[if !mso]><!-->
+<style>
+@font-face{font-family:'Fira Sans';font-style:normal;font-weight:300;font-display:swap;src:local('Fira Sans Light'),local('FiraSans-Light'),url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnPKreRhf6Xl7Glw.woff2) format('woff2');}
+@font-face{font-family:'Fira Sans';font-style:normal;font-weight:500;src:local('Fira Sans Medium'),local('FiraSans-Medium'),url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnZKveRhf6Xl7Glw.woff2) format('woff2');}
+@font-face{font-family:'Fira Sans';font-style:normal;font-weight:800;font-display:swap;src:local('Fira Sans ExtraBold'),local('FiraSans-ExtraBold'),url(https://fonts.gstatic.com/s/firasans/v10/va9B4kDNxMZdWfMOD5VnMK7eRhf6Xl7Glw.woff2) format('woff2');}
+</style>
+<!--<![endif]-->
+
+<style>
+/* ══════════════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════════════ */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100% !important;
+  width: 100% !important;
+  -webkit-font-smoothing: antialiased;
+  background-color: #060400 !important;
+}
+* { -ms-text-size-adjust: 100%; }
+#outlook a { padding: 0; }
+.ReadMsgBody, .ExternalClass { width: 100%; }
+.ExternalClass, .ExternalClass p, .ExternalClass td,
+.ExternalClass div, .ExternalClass span, .ExternalClass font { line-height: 100%; }
+table, td, th { mso-table-lspace: 0 !important; mso-table-rspace: 0 !important; border-collapse: collapse; }
+img { border: 0; outline: 0; line-height: 100%; text-decoration: none; -ms-interpolation-mode: bicubic; }
+a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+
+/* ── Logo on white area — stays white in all dark-mode clients ── */
+.logo-dihadi { display: block; height: 38px; width: auto; margin: auto; border: 0; }
+
+/* ── Outlook iOS / Gmail iOS [data-ogsc] dark-mode ──────────── */
+[data-ogsc] .bg-base,
+[data-ogsb] .bg-base                 { background-color: #060400 !important; background-image: linear-gradient(#060400,#060400) !important; }
+[data-ogsc] .bg-header,
+[data-ogsb] .bg-header               { background-color: #080500 !important; background-image: linear-gradient(#080500,#080500) !important; }
+[data-ogsc] .bg-hero,
+[data-ogsb] .bg-hero                 { background-color: #080500 !important; background-image: linear-gradient(#080500,#080500) !important; }
+[data-ogsc] .bg-overlay,
+[data-ogsb] .bg-overlay              { background-color: #060300 !important; background-image: linear-gradient(#060300,#060300) !important; }
+[data-ogsc] .bg-stats,
+[data-ogsb] .bg-stats                { background-color: #0f0c00 !important; background-image: linear-gradient(#0f0c00,#0f0c00) !important; }
+[data-ogsc] .bg-events,
+[data-ogsb] .bg-events               { background-color: #0d0b00 !important; background-image: linear-gradient(#0d0b00,#0d0b00) !important; }
+[data-ogsc] .bg-quote,
+[data-ogsb] .bg-quote                { background-color: #0c0800 !important; background-image: linear-gradient(#0c0800,#0c0800) !important; }
+[data-ogsc] .bg-cta,
+[data-ogsb] .bg-cta                  { background-color: #0e0b00 !important; background-image: linear-gradient(#0e0b00,#0e0b00) !important; }
+[data-ogsc] .bg-footer,
+[data-ogsb] .bg-footer               { background-color: #0e0b00 !important; background-image: linear-gradient(#0e0b00,#0e0b00) !important; }
+
+[data-ogsc] .txt-primary,
+[data-ogsb] .txt-primary             { color: #e5e7eb !important; }
+[data-ogsc] .txt-muted,
+[data-ogsb] .txt-muted               { color: #9ca3af !important; }
+[data-ogsc] .txt-accent,
+[data-ogsb] .txt-accent              { color: #F68213 !important; }
+[data-ogsc] .txt-label,
+[data-ogsb] .txt-label               { color: #6b7280 !important; }
+[data-ogsc] .txt-white,
+[data-ogsb] .txt-white               { color: #ffffff !important; }
+[data-ogsc] img,
+[data-ogsb] img                      { -webkit-filter: none !important; filter: none !important; }
+[data-ogsc] body,
+[data-ogsb] body                     { background-color: #060400 !important; background-image: linear-gradient(#060400,#060400) !important; }
+[data-ogsc] .outer-wrapper,
+[data-ogsb] .outer-wrapper           { background-color: #060400 !important; background-image: linear-gradient(#060400,#060400) !important; }
+/* Logo area stays white in all dark clients */
+[data-ogsc] .logo-area,
+[data-ogsb] .logo-area               { background-color: #ffffff !important; background-image: linear-gradient(#ffffff,#ffffff) !important; }
+[data-ogsc] .logo-area-center,
+[data-ogsb] .logo-area-center        { background-color: #ffffff !important; background-image: linear-gradient(#ffffff,#ffffff) !important; }
+[data-ogsc] .logo-area img,
+[data-ogsb] .logo-area img           { -webkit-filter: none !important; filter: none !important; }
+
+/* ── Gmail web dark mode (u + .outer-wrapper) ────────────────── */
+u + .outer-wrapper .bg-base         { background-color: #060400 !important; background-image: linear-gradient(#060400,#060400) !important; }
+u + .outer-wrapper .bg-header       { background-color: #080500 !important; background-image: linear-gradient(#080500,#080500) !important; }
+u + .outer-wrapper .bg-hero         { background-color: #080500 !important; background-image: linear-gradient(#080500,#080500) !important; }
+u + .outer-wrapper .bg-overlay      { background-color: #060300 !important; background-image: linear-gradient(#060300,#060300) !important; }
+u + .outer-wrapper .bg-stats        { background-color: #0f0c00 !important; background-image: linear-gradient(#0f0c00,#0f0c00) !important; }
+u + .outer-wrapper .bg-events       { background-color: #0d0b00 !important; background-image: linear-gradient(#0d0b00,#0d0b00) !important; }
+u + .outer-wrapper .bg-quote        { background-color: #0c0800 !important; background-image: linear-gradient(#0c0800,#0c0800) !important; }
+u + .outer-wrapper .bg-cta          { background-color: #0e0b00 !important; background-image: linear-gradient(#0e0b00,#0e0b00) !important; }
+u + .outer-wrapper .bg-footer       { background-color: #0e0b00 !important; background-image: linear-gradient(#0e0b00,#0e0b00) !important; }
+u + .outer-wrapper .txt-primary     { color: #e5e7eb !important; }
+u + .outer-wrapper .txt-muted       { color: #9ca3af !important; }
+u + .outer-wrapper .txt-accent      { color: #F68213 !important; }
+u + .outer-wrapper .txt-label       { color: #6b7280 !important; }
+u + .outer-wrapper .txt-white       { color: #ffffff !important; }
+u + .outer-wrapper img              { -webkit-filter: none !important; filter: none !important; }
+u + .outer-wrapper .logo-area       { background-color: #ffffff !important; background-image: linear-gradient(#ffffff,#ffffff) !important; }
+u + .outer-wrapper .logo-area-center{ background-color: #ffffff !important; background-image: linear-gradient(#ffffff,#ffffff) !important; }
+
+/* ── Standard media-query fallback — force dark even in light OS ── */
+@media (prefers-color-scheme: light) {
+  html, body,
+  .outer-wrapper                { background-color: #060400 !important; }
+  .bg-base                      { background-color: #060400 !important; }
+  .bg-header                    { background-color: #080500 !important; }
+  .bg-hero                      { background-color: #080500 !important; }
+  .bg-overlay                   { background-color: rgba(6,3,0,0.85) !important; }
+  .bg-stats                     { background-color: #0f0c00 !important; }
+  .bg-events                    { background-color: #0d0b00 !important; }
+  .bg-quote                     { background-color: #0c0800 !important; }
+  .bg-cta                       { background-color: #0e0b00 !important; }
+  .bg-footer                    { background-color: #0e0b00 !important; }
+  .txt-primary                  { color: #e5e7eb !important; }
+  .txt-muted                    { color: #9ca3af !important; }
+  .txt-accent                   { color: #F68213 !important; }
+  .txt-label                    { color: #6b7280 !important; }
+  .txt-white                    { color: #ffffff !important; }
+  img                           { -webkit-filter: none !important; filter: none !important; }
+  .logo-area, .logo-area-center { background-color: #ffffff !important; }
+}
+
+/* ── Dark mode — reinforce our colours ─────────────────────── */
+@media (prefers-color-scheme: dark) {
+  html, body, .outer-wrapper    { background-color: #060400 !important; color-scheme: dark; }
+  .bg-base                      { background-color: #060400 !important; }
+  .bg-header                    { background-color: #080500 !important; }
+  .bg-hero                      { background-color: #080500 !important; }
+  .bg-overlay                   { background-color: #060300 !important; }
+  .bg-stats                     { background-color: #0f0c00 !important; }
+  .bg-events                    { background-color: #0d0b00 !important; }
+  .bg-quote                     { background-color: #0c0800 !important; }
+  .bg-cta                       { background-color: #0e0b00 !important; }
+  .bg-footer                    { background-color: #0e0b00 !important; }
+  .txt-primary                  { color: #e5e7eb !important; }
+  .txt-muted                    { color: #9ca3af !important; }
+  .txt-accent                   { color: #F68213 !important; }
+  .txt-label                    { color: #6b7280 !important; }
+  .txt-white                    { color: #ffffff !important; }
+  img                           { -webkit-filter: none !important; filter: none !important; }
+  .logo-area, .logo-area-center { background-color: #ffffff !important; }
+}
+
+/* ══════════════════════════════════════════════
+   HOVER EFFECTS (desktop webmail)
+══════════════════════════════════════════════ */
+a.btn-primary:hover {
+  opacity: 0.85 !important;
+  background: linear-gradient(135deg,#BF6010 0%,#FF9F45 100%) !important;
+}
+.role-card:hover {
+  border-color: rgba(246,130,19,0.9) !important;
+  background-color: rgba(26,12,0,0.95) !important;
+}
+.social-link:hover {
+  color: #FF9F45 !important;
+  text-decoration: underline !important;
+}
+.stat-cell:hover { background-color: rgba(246,130,19,0.08) !important; }
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — three-tier fluid sizing
+══════════════════════════════════════════════ */
+
+/* ── LARGE: restore full hero title above 620px ── */
+@media only screen and (min-width: 621px) {
+  .hero-title { font-size: 54px !important; }
+}
+
+/* ── MEDIUM: 421–620 px (tablets, large phones landscape) ── */
+@media only screen and (max-width: 620px) {
+  .outer-wrapper,
+  .email-container,
+  .email-body,
+  .full-width-table         { width: 100% !important; max-width: 100% !important; }
+
+  /* Logo */
+  .logo-area                { padding: 3% 4% !important; }
+  .logo-dihadi              { height: 6.5vw !important; max-height: 34px !important; width: auto !important; }
+
+  /* Hero */
+  .hero-outer               { background-size: 160% auto !important; }
+  .hero-inner-pad           { padding: 9% 5% 8% !important; }
+  .hero-org-line            { font-size: 0.58em !important; letter-spacing: 0.22em !important; }
+  .hero-title               { font-size: 11vw !important; }
+  .hero-pills td            { display: block !important; padding: 0.25em 0 !important; text-align: center !important; }
+  .hero-pill                { display: inline-block !important; }
+  .hero-lead                { font-size: 1.1em !important; }
+  .hero-body                { font-size: 0.9em !important; }
+
+  /* Stats — stack 2×2 */
+  .stat-cell {
+    display: inline-block !important;
+    width: 49% !important;
+    box-sizing: border-box !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(246,130,19,0.18) !important;
+    vertical-align: top !important;
+  }
+  .stat-cell:nth-child(odd)  { border-right: 1px solid rgba(246,130,19,0.18) !important; }
+  .stat-cell:last-child      { border-bottom: none !important; }
+  .stat-number               { font-size: 1.75em !important; }
+
+  /* Section label */
+  .section-label            { font-size: 0.6em !important; letter-spacing: 0.25em !important; padding: 0.7em 5% !important; }
+
+  /* Cards */
+  .section-pad              { padding: 5% 4% !important; }
+  .role-card                { padding: 3.5% !important; }
+  .role-card-title          { font-size: 0.9em !important; }
+  .role-card-body           { font-size: 0.875em !important; }
+
+  /* Mentor grid — stack to single column */
+  .mentor-cell              { display: block !important; width: 100% !important; box-sizing: border-box !important; padding: 0 0 8px 0 !important; }
+
+  /* Pull quote */
+  .quote-pad                { padding: 6% 5% !important; }
+  .quote-text               { font-size: 1.3em !important; }
+
+  /* CTA */
+  .cta-pad                  { padding: 7% 5% 6% !important; }
+  .cta-head                 { font-size: 1.6em !important; }
+  .cta-body                 { font-size: 0.9em !important; }
+  .btn-primary              { padding: 1em 6% !important; font-size: 0.8em !important; width: 82% !important; box-sizing: border-box !important; }
+  .audience-tags            { font-size: 0.65em !important; }
+  .audience-tag             { display: inline-block !important; margin: 0.2em 0.15em !important; }
+
+  /* Footer */
+  .footer-pad               { padding: 4.5% 5% !important; }
+  .footer-brand             { font-size: 0.9em !important; }
+  .footer-text              { font-size: 0.7em !important; }
+}
+
+/* ── SMALL: up to 420 px (small phones) ── */
+@media only screen and (max-width: 420px) {
+  .logo-dihadi              { height: 8vw !important; max-height: 30px !important; width: auto !important; }
+  .hero-inner-pad           { padding: 10% 4% 9% !important; }
+  .hero-title               { font-size: 12vw !important; }
+  .hero-org-line            { font-size: 0.53em !important; }
+  .hero-lead                { font-size: 1.0em !important; }
+  .stat-number              { font-size: 1.5em !important; }
+  .quote-text               { font-size: 1.15em !important; }
+  .cta-head                 { font-size: 1.4em !important; }
+  .btn-primary              { width: 90% !important; padding: 1em 4% !important; }
+  .section-pad              { padding: 4% 3.5% !important; }
+}
+</style>
+<!--[if mso]>
+<style>.pc-font-alt{font-family:Arial,Helvetica,sans-serif!important;}</style>
+<![endif]-->
+<!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+</head>
+
+<body class="pc-font-alt outer-wrapper bg-base"
+  style="width:100%!important;min-height:100%!important;margin:0!important;padding:0!important;
+         mso-line-height-rule:exactly;background-color:#060400;color-scheme:only dark;"
+  bgcolor="#060400">
+
+<table class="outer-wrapper" style="table-layout:fixed;width:100%;background-color:#060400;" bgcolor="#060400" border="0" cellspacing="0" cellpadding="0" role="presentation">
+<tr><td align="center" valign="top">
+
+  <table class="email-container" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;max-width:600px;">
+  <tr><td style="padding:0;" align="left" valign="top">
+
+    <table class="email-body full-width-table" style="width:100%;max-width:600px;" width="100%" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
+    <tr><td valign="top" class="bg-base" style="background-color:#060400;" bgcolor="#060400">
+
+
+    <!-- ════════ SECTION 1: LOGO HEADER ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="logo-area" align="center" style="background-color:#ffffff;" bgcolor="#ffffff">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <td class="logo-area-center" align="center" style="padding:20px 24px;background-color:#ffffff;" bgcolor="#ffffff">
+            <img src="https://dihadi.co.in/brand/dihadi_logo.svg" alt="Dihadi" class="logo-dihadi"
+              style="display:block;height:38px;width:auto;margin:auto;border:0;"
+              width="140" height="38"/>
+            <!-- Badge pills below logo -->
+            <div style="margin-top:12px;text-align:center;line-height:2.2;">
+              <span style="display:inline-block;background-color:rgba(0,0,0,0.82);color:#ffffff;font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;padding:0.2em 0.7em;border-radius:2px;margin:0 0.2em;">&#8377;11L+ Funded</span><!--
+           --><span style="display:inline-block;background-color:rgba(0,0,0,0.82);color:#ffffff;font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;padding:0.2em 0.7em;border-radius:2px;margin:0 0.2em;">Accel YMF</span><!--
+           --><span style="display:inline-block;background-color:rgba(0,0,0,0.82);color:#ffffff;font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;padding:0.2em 0.7em;border-radius:2px;margin:0 0.2em;">IIM Kashipur Incubated</span>
+            </div>
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 2: HERO ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="hero-outer bg-header" valign="top" align="center"
+        style="background-color:#080500;
+               background-image:linear-gradient(160deg,#1f0b00 0%,#100600 60%,#060300 100%);
+               background-size:100% auto;
+               background-position:center center;
+               background-repeat:no-repeat;
+               border-bottom:2px solid rgba(246,130,19,0.2);
+               padding:0;margin:0;"
+        bgcolor="#080500">
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <td class="hero-inner-pad bg-overlay" align="center" valign="top"
+            style="background-color:#060300;background-color:rgba(6,3,0,0.85);padding:10% 6% 9%;"
+            bgcolor="#060300">
+
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+              <!-- Org line -->
+              <tr><td align="center" style="padding-bottom:1.375em;">
+                <div class="pc-font-alt hero-org-line txt-accent"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                         letter-spacing:0.4em;color:#F68213;text-transform:uppercase;">
+                  &#9672; &nbsp; DIHADI INTERNSHIP DRIVE &nbsp; &#9672;
+                </div>
+              </td></tr>
+
+              <!-- Hero title -->
+              <tr><td align="center" style="padding-bottom:0.5em;">
+                <!--[if mso]><div class="pc-font-alt" style="font-family:Arial,Helvetica,sans-serif;font-size:54px;font-weight:800;letter-spacing:0.04em;line-height:1;color:#F68213;text-transform:uppercase;text-align:center;">BUILD FOR BHARAT.</div><![endif]-->
+                <!--[if !mso]><!-->
+                <div class="pc-font-alt hero-title"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:54px;font-weight:800;
+                         letter-spacing:0.04em;line-height:1;text-transform:uppercase;
+                         background:linear-gradient(135deg,#F68213 0%,#FF9F45 50%,#FFBE80 100%);
+                         -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                         background-clip:text;color:#F68213;">
+                  BUILD FOR BHARAT.
+                </div>
+                <!--<![endif]-->
+              </td></tr>
+
+              <!-- Pill row -->
+              <tr><td class="hero-pills" align="center" style="padding-bottom:2em;text-align:center;">
+                <div class="pc-font-alt hero-pill txt-muted"
+                  style="display:inline-block;border:1px solid rgba(246,130,19,0.45);
+                         font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                         letter-spacing:0.18em;color:#9ca3af;text-transform:uppercase;padding:0.44em 1.1em;
+                         background-color:#1a0c00;background-color:rgba(26,12,0,0.75);margin:0.25em 0.31em;">
+                  4 ROLES OPEN
+                </div><!--
+             --><div class="pc-font-alt hero-pill txt-muted"
+                  style="display:inline-block;border:1px solid rgba(246,130,19,0.45);
+                         font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                         letter-spacing:0.18em;color:#9ca3af;text-transform:uppercase;padding:0.44em 1.1em;
+                         background-color:#1a0c00;background-color:rgba(26,12,0,0.75);margin:0.25em 0.31em;">
+                  REMOTE-FRIENDLY
+                </div><!--
+             --><div class="pc-font-alt hero-pill txt-muted"
+                  style="display:inline-block;border:1px solid rgba(246,130,19,0.45);
+                         font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                         letter-spacing:0.18em;color:#9ca3af;text-transform:uppercase;padding:0.44em 1.1em;
+                         background-color:#1a0c00;background-color:rgba(26,12,0,0.75);margin:0.25em 0.31em;">
+                  ROLLING APPLICATIONS
+                </div>
+              </td></tr>
+
+              <!-- Hero lead -->
+              <tr><td align="center" style="padding-bottom:0.875em;">
+                <div class="pc-font-alt hero-lead txt-primary"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1.375em;font-weight:800;
+                         letter-spacing:-0.3px;line-height:140%;color:#e5e7eb;max-width:90%;margin:0 auto;">
+                  Hey BITSian &#128075; &mdash; your seniors built something real.
+                </div>
+              </td></tr>
+
+              <!-- Hero body -->
+              <tr><td align="center" style="padding-bottom:0.875em;">
+                <div class="pc-font-alt hero-body txt-muted"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:300;
+                         line-height:170%;color:#d1d5db;max-width:90%;margin:0 auto;">
+                  We're Dihadi &mdash; India's first Agentic AI platform for daily wage workers and contractors. Built at BITS. Backed by Accel. Incubated at IIM Kashipur. We match workers to jobs in minutes via WhatsApp, Voice &amp; Mobile &mdash; fixing a broken system that costs millions their daily income. Now we need sharp BITSians to help us scale.
+                </div>
+              </td></tr>
+
+              <!-- Italic -->
+              <tr><td align="center">
+                <div class="pc-font-alt hero-italic txt-accent"
+                  style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:500;
+                         font-style:italic;color:#F68213;">
+                  Come build something that actually changes lives.
+                </div>
+              </td></tr>
+
+            </table>
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 3: STATS BAR ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="bg-stats" style="background-color:#0f0c00;border-top:1px solid rgba(246,130,19,0.18);border-bottom:1px solid rgba(246,130,19,0.18);" bgcolor="#0f0c00">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+
+          <td class="stat-cell" align="center" valign="middle" width="25%"
+            style="padding:4% 2%;border-right:1px solid rgba(246,130,19,0.2);">
+            <div style="font-size:1.25em;margin-bottom:0.375em;">&#128119;</div>
+            <div class="pc-font-alt stat-number"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.25em;font-weight:800;
+                     line-height:1;margin-bottom:0.375em;
+                     background:linear-gradient(135deg,#F68213 0%,#FF9F45 100%);
+                     -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                     background-clip:text;color:#F68213;">12M+</div>
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                     letter-spacing:0.1em;color:#6b7280;text-transform:uppercase;line-height:1.5;">
+              Workers<br/>Unemployed Daily
+            </div>
+          </td>
+
+          <td class="stat-cell" align="center" valign="middle" width="25%"
+            style="padding:4% 2%;border-right:1px solid rgba(246,130,19,0.2);">
+            <div style="font-size:1.25em;margin-bottom:0.375em;">&#128176;</div>
+            <div class="pc-font-alt stat-number"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.25em;font-weight:800;
+                     line-height:1;margin-bottom:0.375em;
+                     background:linear-gradient(135deg,#F68213 0%,#FF9F45 100%);
+                     -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                     background-clip:text;color:#F68213;">&#8377;11L+</div>
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                     letter-spacing:0.1em;color:#6b7280;text-transform:uppercase;line-height:1.5;">
+              Raised<br/>in Grants
+            </div>
+          </td>
+
+          <td class="stat-cell" align="center" valign="middle" width="25%"
+            style="padding:4% 2%;border-right:1px solid rgba(246,130,19,0.2);">
+            <div style="font-size:1.25em;margin-bottom:0.375em;">&#128188;</div>
+            <div class="pc-font-alt stat-number"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.25em;font-weight:800;
+                     line-height:1;margin-bottom:0.375em;
+                     background:linear-gradient(135deg,#F68213 0%,#FF9F45 100%);
+                     -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                     background-clip:text;color:#F68213;">4</div>
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                     letter-spacing:0.1em;color:#6b7280;text-transform:uppercase;line-height:1.5;">
+              Open<br/>Intern Roles
+            </div>
+          </td>
+
+          <td class="stat-cell" align="center" valign="middle" width="25%"
+            style="padding:4% 2%;">
+            <div style="font-size:1.25em;margin-bottom:0.375em;">&#128202;</div>
+            <div class="pc-font-alt stat-number"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.25em;font-weight:800;
+                     line-height:1;margin-bottom:0.375em;
+                     background:linear-gradient(135deg,#F68213 0%,#FF9F45 100%);
+                     -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                     background-clip:text;color:#F68213;">400+</div>
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                     letter-spacing:0.1em;color:#6b7280;text-transform:uppercase;line-height:1.5;">
+              Workers<br/>Surveyed
+            </div>
+          </td>
+
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 4: SECTION LABEL — OPEN POSITIONS ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td align="center"
+        style="background:linear-gradient(135deg,rgba(246,130,19,0.9) 0%,rgba(191,96,16,0.9) 100%);
+               padding:10px 6%;" bgcolor="#BF6010">
+        <div class="pc-font-alt section-label txt-white"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:800;
+                 letter-spacing:0.4em;color:#ffffff;text-transform:uppercase;">
+          OPEN POSITIONS
+        </div>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 5 + 6: ROLE CARDS + INTERNSHIP DETAILS ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="section-pad bg-events"
+        style="padding:6.5% 6%;background-color:#0d0b00;border-bottom:1px solid rgba(246,130,19,0.15);" bgcolor="#0d0b00">
+
+        <!-- Card 1 — FEATURED -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="role-card" bgcolor="#1a0c00"
+            style="background-color:#1a0c00;border:1px solid rgba(246,130,19,0.65);padding:4%;">
+            <div class="pc-font-alt txt-accent"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#F68213;text-transform:uppercase;margin-bottom:0.375em;">
+              &#9733; Research &middot; Market Intelligence
+            </div>
+            <div class="pc-font-alt role-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#e5e7eb;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              RESEARCH INTERN
+            </div>
+            <div class="pc-font-alt role-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#9ca3af;margin-bottom:0.75em;">
+              Map India's informal labour market &mdash; policy landscape, regulatory environment, competitor intelligence, and on-ground insights from labour chowks. Turn data into sharp, actionable narratives.
+            </div>
+            <div style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.66em;font-weight:500;line-height:2.2;">
+              <span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;margin-right:0.3em;letter-spacing:0.06em;">Research</span><!--
+           --><span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;margin-right:0.3em;letter-spacing:0.06em;">Policy</span><!--
+           --><span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;letter-spacing:0.06em;">Field Work</span>
+            </div>
+          </td>
+        </tr></table><div style="height:12px;"></div>
+
+        <!-- Card 2 — Marketing -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="role-card" bgcolor="#130a00"
+            style="background-color:#130a00;border:1px solid rgba(246,130,19,0.3);padding:4%;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#6b7280;text-transform:uppercase;margin-bottom:0.375em;">
+              Growth &middot; Brand
+            </div>
+            <div class="pc-font-alt role-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#e5e7eb;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              MARKETING INTERN
+            </div>
+            <div class="pc-font-alt role-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#9ca3af;margin-bottom:0.75em;">
+              Own Dihadi's growth story. Run acquisition campaigns, build contractor &amp; worker funnels, and help us hit 1,000+ users in our pilot city. Hustle and bias for action required.
+            </div>
+            <div style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.66em;font-weight:500;line-height:2.2;">
+              <span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;margin-right:0.3em;letter-spacing:0.06em;">GTM</span><!--
+           --><span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;margin-right:0.3em;letter-spacing:0.06em;">WhatsApp</span><!--
+           --><span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;letter-spacing:0.06em;">Analytics</span>
+            </div>
+          </td>
+        </tr></table><div style="height:12px;"></div>
+
+        <!-- Card 3 — App UI/UX Designer -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="role-card" bgcolor="#130a00"
+            style="background-color:#130a00;border:1px solid rgba(246,130,19,0.3);padding:4%;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#6b7280;text-transform:uppercase;margin-bottom:0.375em;">
+              Design &middot; Product
+            </div>
+            <div class="pc-font-alt role-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#e5e7eb;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              APP UI/UX DESIGNER
+            </div>
+            <div class="pc-font-alt role-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#9ca3af;margin-bottom:0.75em;">
+              Design the product that millions of informal workers will actually use &mdash; clean, accessible, multilingual, built for low-literacy users. Shape India's first digital labour platform.
+            </div>
+            <div style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.66em;font-weight:500;line-height:2.2;">
+              <span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;margin-right:0.3em;letter-spacing:0.06em;">Figma</span><!--
+           --><span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;margin-right:0.3em;letter-spacing:0.06em;">Mobile UI</span><!--
+           --><span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;letter-spacing:0.06em;">Accessibility</span>
+            </div>
+          </td>
+        </tr></table><div style="height:12px;"></div>
+
+        <!-- Card 4 — Social Media Designer -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td class="role-card" bgcolor="#130a00"
+            style="background-color:#130a00;border:1px solid rgba(246,130,19,0.3);padding:4%;">
+            <div class="pc-font-alt txt-label"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                     letter-spacing:0.22em;color:#6b7280;text-transform:uppercase;margin-bottom:0.375em;">
+              Design &middot; Content
+            </div>
+            <div class="pc-font-alt role-card-title txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                     color:#e5e7eb;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.5em;">
+              SOCIAL MEDIA DESIGNER
+            </div>
+            <div class="pc-font-alt role-card-body txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#9ca3af;margin-bottom:0.75em;">
+              Tell Dihadi's story in a way that stops the scroll. Create visuals for Instagram, LinkedIn &amp; WhatsApp that blend impact storytelling with sharp design.
+            </div>
+            <div style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.66em;font-weight:500;line-height:2.2;">
+              <span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;margin-right:0.3em;letter-spacing:0.06em;">Instagram</span><!--
+           --><span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;margin-right:0.3em;letter-spacing:0.06em;">LinkedIn</span><!--
+           --><span style="display:inline-block;background-color:rgba(246,130,19,0.12);border:1px solid rgba(246,130,19,0.35);color:#F68213;padding:0.18em 0.65em;letter-spacing:0.06em;">Motion</span>
+            </div>
+          </td>
+        </tr></table>
+
+        <!-- Internship Details Table (Section 6) -->
+        <div style="height:20px;"></div>
+        <div class="pc-font-alt"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.6em;font-weight:600;
+                 letter-spacing:0.3em;color:#6b7280;text-transform:uppercase;margin-bottom:8px;">
+          INTERNSHIP DETAILS
+        </div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+            <td style="padding:8px 10px;background-color:rgba(246,130,19,0.06);border-bottom:1px solid rgba(246,130,19,0.1);width:40%;">
+              <div class="pc-font-alt" style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:600;color:#9ca3af;">&#128176; Stipend</div>
+            </td>
+            <td style="padding:8px 10px;background-color:rgba(246,130,19,0.06);border-bottom:1px solid rgba(246,130,19,0.1);text-align:right;">
+              <div class="pc-font-alt" style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:400;color:#e5e7eb;">Negotiable &mdash; we pay fairly</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 10px;border-bottom:1px solid rgba(246,130,19,0.1);width:40%;">
+              <div class="pc-font-alt" style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:600;color:#9ca3af;">&#128197; Duration</div>
+            </td>
+            <td style="padding:8px 10px;border-bottom:1px solid rgba(246,130,19,0.1);text-align:right;">
+              <div class="pc-font-alt" style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:400;color:#e5e7eb;">Min 2 months (flexible)</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 10px;background-color:rgba(246,130,19,0.06);border-bottom:1px solid rgba(246,130,19,0.1);width:40%;">
+              <div class="pc-font-alt" style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:600;color:#9ca3af;">&#127760; Mode</div>
+            </td>
+            <td style="padding:8px 10px;background-color:rgba(246,130,19,0.06);border-bottom:1px solid rgba(246,130,19,0.1);text-align:right;">
+              <div class="pc-font-alt" style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:400;color:#e5e7eb;">Remote-friendly; occasional on-ground</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 10px;width:40%;">
+              <div class="pc-font-alt" style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:600;color:#9ca3af;">&#128640; Start</div>
+            </td>
+            <td style="padding:8px 10px;text-align:right;">
+              <div class="pc-font-alt" style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:400;color:#e5e7eb;">Rolling &mdash; apply as soon as possible</div>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 7: SECTION LABEL — WHY DIHADI ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td align="center"
+        style="background:linear-gradient(135deg,rgba(246,130,19,0.9) 0%,rgba(191,96,16,0.9) 100%);
+               padding:10px 6%;" bgcolor="#BF6010">
+        <div class="pc-font-alt section-label txt-white"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:800;
+                 letter-spacing:0.4em;color:#ffffff;text-transform:uppercase;">
+          WHY DIHADI
+        </div>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 8: WHY CARDS ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="section-pad bg-events"
+        style="padding:6% 6%;background-color:#0d0b00;" bgcolor="#0d0b00">
+
+        <!-- Why Card 1 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td bgcolor="#100800"
+            style="background-color:#100800;border-left:3px solid #F68213;border:1px solid rgba(246,130,19,0.2);border-left:3px solid #F68213;padding:4%;">
+            <div class="pc-font-alt txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.95em;font-weight:800;
+                     color:#e5e7eb;margin-bottom:0.4em;">
+              &#128295; Real work. Zero busy-work.
+            </div>
+            <div class="pc-font-alt txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#9ca3af;">
+              You'll own actual product decisions. Not slides, not decks &mdash; working features, live users, real feedback from workers in the field.
+            </div>
+          </td>
+        </tr></table><div style="height:10px;"></div>
+
+        <!-- Why Card 2 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td bgcolor="#100800"
+            style="background-color:#100800;border-left:3px solid #F68213;border:1px solid rgba(246,130,19,0.2);border-left:3px solid #F68213;padding:4%;">
+            <div class="pc-font-alt txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.95em;font-weight:800;
+                     color:#e5e7eb;margin-bottom:0.4em;">
+              &#129309; Direct mentor access.
+            </div>
+            <div class="pc-font-alt txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#9ca3af;">
+              Dinesh Katiyar &amp; Subrata Mitra (Accel), Abhishek Ballabh (ExtraaEdge), Avinash Raghava (SaaSBoomi). Access most early-career folks spend years trying to reach.
+            </div>
+          </td>
+        </tr></table><div style="height:10px;"></div>
+
+        <!-- Why Card 3 -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+          <td bgcolor="#100800"
+            style="background-color:#100800;border-left:3px solid #F68213;border:1px solid rgba(246,130,19,0.2);border-left:3px solid #F68213;padding:4%;">
+            <div class="pc-font-alt txt-primary"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.95em;font-weight:800;
+                     color:#e5e7eb;margin-bottom:0.4em;">
+              &#127891; BITSian-built, BITSian-hiring.
+            </div>
+            <div class="pc-font-alt txt-muted"
+              style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.875em;font-weight:300;
+                     line-height:162%;color:#9ca3af;">
+              &#8377;11L+ raised, IIM-K incubated, Accel-backed &mdash; before most startups have a deck. Your seniors proved it's possible. Now they're looking for the next batch.
+            </div>
+          </td>
+        </tr></table>
+
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 9: SECTION LABEL — YOUR MENTORS ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td align="center"
+        style="background:linear-gradient(135deg,rgba(246,130,19,0.9) 0%,rgba(191,96,16,0.9) 100%);
+               padding:10px 6%;" bgcolor="#BF6010">
+        <div class="pc-font-alt section-label txt-white"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:800;
+                 letter-spacing:0.4em;color:#ffffff;text-transform:uppercase;">
+          YOUR MENTORS
+        </div>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 10: MENTOR GRID ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="section-pad bg-events"
+        style="padding:6% 6% 5%;background-color:#0d0b00;" bgcolor="#0d0b00">
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+          <!-- Mentor Row 1 -->
+          <tr>
+            <td class="mentor-cell" valign="top" width="50%" style="padding:0 4px 8px 0;">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+                <td class="mentor-card" bgcolor="#130a00"
+                  style="background-color:#130a00;border:1px solid rgba(246,130,19,0.2);border-top:3px solid #F68213;padding:12px 14px;">
+                  <div class="pc-font-alt txt-primary"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.8em;font-weight:700;color:#e5e7eb;">
+                    Dinesh Katiyar
+                  </div>
+                  <div class="pc-font-alt txt-accent"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.66em;font-weight:600;color:#F68213;margin-top:2px;">
+                    Partner &middot; Accel India
+                  </div>
+                  <div class="pc-font-alt txt-muted"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.68em;font-weight:300;color:#9ca3af;line-height:1.5;margin-top:5px;">
+                    IIT KGP &amp; Stanford PhD. Built SayNow (acquired by Google).
+                  </div>
+                </td>
+              </tr></table>
+            </td>
+
+            <td class="mentor-cell" valign="top" width="50%" style="padding:0 0 8px 4px;">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+                <td class="mentor-card" bgcolor="#130a00"
+                  style="background-color:#130a00;border:1px solid rgba(246,130,19,0.2);border-top:3px solid #F68213;padding:12px 14px;">
+                  <div class="pc-font-alt txt-primary"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.8em;font-weight:700;color:#e5e7eb;">
+                    Subrata Mitra
+                  </div>
+                  <div class="pc-font-alt txt-accent"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.66em;font-weight:600;color:#F68213;margin-top:2px;">
+                    Co-founder &middot; Accel India
+                  </div>
+                  <div class="pc-font-alt txt-muted"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.68em;font-weight:300;color:#9ca3af;line-height:1.5;margin-top:5px;">
+                    Backed Flipkart, Cure.fit &amp; dozens of category winners.
+                  </div>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Mentor Row 2 -->
+          <tr>
+            <td class="mentor-cell" valign="top" width="50%" style="padding:0 4px 0 0;">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+                <td class="mentor-card" bgcolor="#130a00"
+                  style="background-color:#130a00;border:1px solid rgba(246,130,19,0.2);border-top:3px solid #F68213;padding:12px 14px;">
+                  <div class="pc-font-alt txt-primary"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.8em;font-weight:700;color:#e5e7eb;">
+                    Abhishek Ballabh
+                  </div>
+                  <div class="pc-font-alt txt-accent"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.66em;font-weight:600;color:#F68213;margin-top:2px;">
+                    Co-founder &middot; ExtraaEdge
+                  </div>
+                  <div class="pc-font-alt txt-muted"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.68em;font-weight:300;color:#9ca3af;line-height:1.5;margin-top:5px;">
+                    Ex-HSBC data scientist. Deep SaaS &amp; product expertise.
+                  </div>
+                </td>
+              </tr></table>
+            </td>
+
+            <td class="mentor-cell" valign="top" width="50%" style="padding:0 0 0 4px;">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr>
+                <td class="mentor-card" bgcolor="#130a00"
+                  style="background-color:#130a00;border:1px solid rgba(246,130,19,0.2);border-top:3px solid #F68213;padding:12px 14px;">
+                  <div class="pc-font-alt txt-primary"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.8em;font-weight:700;color:#e5e7eb;">
+                    Avinash Raghava
+                  </div>
+                  <div class="pc-font-alt txt-accent"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.66em;font-weight:600;color:#F68213;margin-top:2px;">
+                    CEO &middot; SaaSBoomi
+                  </div>
+                  <div class="pc-font-alt txt-muted"
+                    style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.68em;font-weight:300;color:#9ca3af;line-height:1.5;margin-top:5px;">
+                    Co-founded iSPIRT 2012. Built India's largest SaaS community.
+                  </div>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 11: INSTITUTION LOGOS STRIP ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td bgcolor="#0d0b00"
+        style="background-color:#0d0b00;border-top:1px solid rgba(246,130,19,0.12);border-bottom:1px solid rgba(246,130,19,0.12);padding:16px 24px;">
+        <div class="pc-font-alt"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.56em;font-weight:600;
+                 letter-spacing:0.3em;color:#4b5563;text-transform:uppercase;text-align:center;margin-bottom:12px;">
+          BACKED BY
+        </div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <td align="center" valign="middle" width="20%" style="padding:0 4px;">
+            <img src="https://www.dihadi.co.in/brand/BITS.svg" alt="BITS Pilani"
+              style="display:block;height:26px;width:auto;max-width:80px;margin:auto;opacity:0.7;
+                     -webkit-filter:brightness(0) invert(0.6);filter:brightness(0) invert(0.6);"
+              height="26"/>
+          </td>
+          <td align="center" valign="middle" width="20%" style="padding:0 4px;">
+            <img src="https://www.dihadi.co.in/brand/IIMKashipur.svg" alt="IIM Kashipur"
+              style="display:block;height:26px;width:auto;max-width:80px;margin:auto;opacity:0.7;
+                     -webkit-filter:brightness(0) invert(0.6);filter:brightness(0) invert(0.6);"
+              height="26"/>
+          </td>
+          <td align="center" valign="middle" width="20%" style="padding:0 4px;">
+            <img src="https://www.dihadi.co.in/brand/MEITY.svg" alt="MeitY"
+              style="display:block;height:26px;width:auto;max-width:80px;margin:auto;opacity:0.7;
+                     -webkit-filter:brightness(0) invert(0.6);filter:brightness(0) invert(0.6);"
+              height="26"/>
+          </td>
+          <td align="center" valign="middle" width="20%" style="padding:0 4px;">
+            <img src="https://www.dihadi.co.in/brand/FIED.svg" alt="FIED"
+              style="display:block;height:26px;width:auto;max-width:80px;margin:auto;opacity:0.7;
+                     -webkit-filter:brightness(0) invert(0.6);filter:brightness(0) invert(0.6);"
+              height="26"/>
+          </td>
+          <td align="center" valign="middle" width="20%" style="padding:0 4px;">
+            <img src="https://www.dihadi.co.in/brand/YMP.svg" alt="Accel YMF"
+              style="display:block;height:26px;width:auto;max-width:80px;margin:auto;opacity:0.7;
+                     -webkit-filter:brightness(0) invert(0.6);filter:brightness(0) invert(0.6);"
+              height="26"/>
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 12: PULL QUOTE ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="quote-pad bg-quote"
+        style="padding:7% 6.5%;background-color:#0c0800;
+               border-top:1px solid rgba(246,130,19,0.18);
+               border-bottom:1px solid rgba(246,130,19,0.18);
+               border-left:3px solid #F68213;"
+        bgcolor="#0c0800">
+        <div class="pc-font-alt quote-text txt-primary"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1.75em;font-weight:800;
+                 letter-spacing:-0.3px;line-height:145%;color:#e5e7eb;margin-bottom:1em;">
+          The next BITSian <span style="color:#F68213;">unicorn</span> will be built by someone who started with a real problem and refused to quit. We're looking for that person.
+        </div>
+        <div class="pc-font-alt txt-label"
+          style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.625em;font-weight:500;
+                 letter-spacing:0.22em;color:#4b5563;text-transform:uppercase;">
+          &mdash; Dihadi Founding Team &middot; BITS Pilani
+        </div>
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 13: CTA ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="cta-pad bg-cta" style="padding:8% 6.5% 7%;background-color:#0e0b00;" bgcolor="#0e0b00">
+
+        <!-- Pre-headline -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td style="padding-bottom:0.625em;">
+          <div class="pc-font-alt txt-label"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.625em;font-weight:500;
+                   letter-spacing:0.3em;color:#6b7280;text-transform:uppercase;">
+            &#9656; &nbsp; Your move, BITSian
+          </div>
+        </td></tr>
+        </table>
+
+        <!-- CTA headline -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td style="padding-bottom:1.25em;">
+          <div class="pc-font-alt cta-head txt-primary"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:2.125em;font-weight:800;
+                   letter-spacing:-0.4px;line-height:118%;color:#e5e7eb;">
+            Ready to build something that actually matters?
+          </div>
+        </td></tr>
+        </table>
+
+        <!-- CTA body -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td style="padding-bottom:2em;">
+          <div class="pc-font-alt cta-body txt-muted"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.9375em;font-weight:300;
+                   line-height:172%;color:#9ca3af;">
+            Applications are rolling &mdash; the sooner you apply, the better. We read every response personally and get back within a week.
+          </div>
+        </td></tr>
+        </table>
+
+        <!-- CTA Button -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="min-width:100%;">
+        <tr><th valign="top" align="center" style="text-align:center;font-weight:normal;line-height:100%;padding-bottom:2em;">
+          <!--[if mso]><table border="0" cellpadding="0" cellspacing="0" role="presentation" align="center"><tr><td valign="middle" align="center" style="background-color:#F68213;text-align:center;padding:18px 52px;" bgcolor="#F68213"><a class="pc-font-alt" style="display:inline-block;text-decoration:none;font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-weight:800;font-size:13px;line-height:140%;letter-spacing:0.22em;text-align:center;color:#111111;text-transform:uppercase;" href="https://forms.gle/if59iJKkiHN9sHMh9" target="_blank">APPLY NOW &#9658;</a></td></tr></table><![endif]-->
+          <!--[if !mso]><!-->
+          <a class="btn-primary"
+            style="display:inline-block;box-sizing:border-box;
+                   background:linear-gradient(135deg,#F68213 0%,#FF9F45 100%);
+                   padding:1.125em 8%;
+                   font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-weight:800;
+                   font-size:0.8125em;line-height:140%;letter-spacing:0.22em;
+                   color:#111111;text-align:center;text-decoration:none;
+                   -webkit-text-size-adjust:none;text-transform:uppercase;
+                   transition:opacity 0.2s;"
+            href="https://forms.gle/if59iJKkiHN9sHMh9" target="_blank">
+            APPLY NOW &nbsp;&#9658;
+          </a>
+          <!--<![endif]-->
+        </th></tr>
+        </table>
+
+        <!-- Audience tags -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td class="audience-tags" style="border-top:1px solid rgba(246,130,19,0.2);padding-top:1.5em;">
+          <div class="pc-font-alt"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.69em;font-weight:500;
+                   letter-spacing:0.14em;color:#6b7280;text-transform:uppercase;line-height:2.6;">
+            Open to: &nbsp;
+            <span class="audience-tag" style="background-color:rgba(246,130,19,0.15);border:1px solid rgba(246,130,19,0.4);padding:0.25em 0.75em;color:#F68213;">Research</span> &nbsp;
+            <span class="audience-tag" style="background-color:rgba(246,130,19,0.15);border:1px solid rgba(246,130,19,0.4);padding:0.25em 0.75em;color:#F68213;">Marketing</span> &nbsp;
+            <span class="audience-tag" style="background-color:rgba(246,130,19,0.15);border:1px solid rgba(246,130,19,0.4);padding:0.25em 0.75em;color:#F68213;">Design</span> &nbsp;
+            <span class="audience-tag" style="background-color:rgba(246,130,19,0.15);border:1px solid rgba(246,130,19,0.4);padding:0.25em 0.75em;color:#F68213;">UI/UX</span>
+          </div>
+        </td></tr>
+        </table>
+
+      </td>
+    </tr>
+    </table>
+
+
+    <!-- ════════ SECTION 14: FOOTER ════════ -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+      <td class="footer-pad bg-footer"
+        style="background-color:#0e0b00;border-top:1px solid rgba(246,130,19,0.18);padding:5% 6.5%;"
+        bgcolor="#0e0b00">
+
+        <!-- Brand name + tagline -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td align="center" style="padding-bottom:16px;">
+          <div class="pc-font-alt footer-brand txt-accent"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:1em;font-weight:800;
+                   color:#F68213;margin-bottom:0.25em;">
+            DIHADI
+          </div>
+          <div class="pc-font-alt footer-text txt-muted"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:300;
+                   letter-spacing:0.08em;color:#9ca3af;line-height:2;">
+            India's Agentic AI Workforce Platform<br/>
+            Built at BITS Pilani &middot; Incubated at IIM Kashipur
+          </div>
+        </td></tr>
+        </table>
+
+        <!-- Social / contact row -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td align="center" style="border-top:1px solid rgba(246,130,19,0.18);padding-top:1.125em;">
+          <a class="social-link" href="mailto:founders@dihadi.co.in" target="_blank"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:500;
+                   letter-spacing:0.15em;color:#F68213;text-decoration:none;text-transform:uppercase;
+                   margin:0 0.875em;transition:color 0.2s;">founders@dihadi.co.in</a>
+          <a class="social-link" href="https://dihadi.co.in" target="_blank"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.75em;font-weight:500;
+                   letter-spacing:0.15em;color:#F68213;text-decoration:none;text-transform:uppercase;
+                   margin:0 0.875em;transition:color 0.2s;">dihadi.co.in</a>
+        </td></tr>
+        </table>
+
+        <div style="height:1.25em;"></div>
+
+        <!-- Legal -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+        <tr><td align="center">
+          <div class="pc-font-alt footer-text"
+            style="font-family:'Fira Sans',Arial,Helvetica,sans-serif;font-size:0.625em;font-weight:300;
+                   letter-spacing:0.08em;color:#374151;text-transform:uppercase;line-height:2;">
+            You received this because you are a student at BITS Pilani.<br/>
+            &copy; 2026 Dihadi. All rights reserved.
+          </div>
+        </td></tr>
+        </table>
+
+      </td>
+    </tr>
+    </table>
+
+
+    </td></tr>
+    </table>
+
+  </td></tr>
+  </table>
+
+</td></tr>
+</table>
+
+</body>
+</html>
